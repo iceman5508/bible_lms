@@ -1,0 +1,2856 @@
+/*-------------------------------------------
+    42. Responsive Design CSS
+-------------------------------------------*/
+
+/*=====================================
+    Extra Large Screen
+========================================*/
+
+@media only screen and (max-width: 1920px) {
+}
+
+@media only screen and (max-width: 1877px) {
+    .header-nav-left-side form {
+        width: 540px;
+    }
+}
+
+@media only screen and (min-width: 1400px) and (max-width: 1800px) {
+    .vimeoPlayer {
+        height: 492px;
+        position: relative;
+    }
+    .vimeoPlayer iframe.xdPlayer {
+        position: absolute;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 1400px) and (max-width: 1800px) {
+}
+
+/*=====================================
+  For Large Screen
+========================================*/
+
+/*------Max 1200px Width Screen------*/
+
+@media only screen and (max-width: 1775px) {
+    /*Menu CSS*/
+    .header-nav-left-side form {
+        width: 450px;
+    }
+    /*Menu CSS*/
+}
+
+/*--------Max 1680px Width Screen---------*/
+@media only screen and (max-width: 1680px) {
+    /*Menu CSS*/
+    .header-nav-left-side form {
+        width: 310px;
+    }
+    /*Menu CSS*/
+}
+
+@media only screen and (max-width: 1654px) {
+    .course-watch-live-class-wrap.instructor-quiz-list-page table td {
+        min-width: 277px;
+    }
+}
+
+@media only screen and (max-width: 1581px) {
+    .instructor-quiz-list-page .course-watch-quiz-list-table table td {
+        min-width: 289px;
+    }
+}
+@media only screen and (max-width: 1560px) {
+    #mainNav .navbar-nav .nav-item .nav-link {
+        padding: 0.75em 13px;
+    }
+}
+
+/*--------Max 1475px Width Screen---------*/
+@media only screen and (max-width: 1475px) {
+    /*Menu CSS*/
+    .header-nav-left-side form {
+        width: 265px;
+    }
+    /*Menu CSS*/
+    /*Course watch*/
+    .course-watch-page-area .container-fluid {
+        padding: 0 50px;
+    }
+    /*Sign In Page*/
+    .sign-up-left-content p {
+        padding-right: 30px;
+    }
+    .direction-rtl .sign-up-left-content p {
+        padding-left: 30px;
+    }
+
+    /* Course Watch */
+    .course-watch-right-accordion-wrap {
+        max-height: 400px;
+    }
+    /* Course Watch */
+}
+
+@media only screen and (max-width: 1455px) {
+    #mainNav .navbar-nav .nav-item .nav-link {
+        padding: 0.75em 11px;
+    }
+    .menu-round-btn > a {
+        margin-right: 18px;
+    }
+    .direction-rtl .menu-round-btn > a {
+        margin-left: 18px;
+    }
+    .menu-language-btn > a {
+        margin-right: 18px;
+        margin-left: 18px;
+    }
+    .header-nav-left-side form {
+        margin-left: 20px;
+    }
+    .direction-rtl .header-nav-left-side form {
+        margin-right: 20px;
+    }
+}
+
+/*--------Max 1366px Width Screen---------*/
+
+@media only screen and (max-width: 1399px) {
+    /*Hero Area*/
+    .come-for-learn-text {
+        width: 68%;
+    }
+    /*Hero Area*/
+
+    .instructor-support-item {
+        padding: 60px 60px;
+    }
+    /*Blog page*/
+    .blog-page-right-content {
+        padding: 30px;
+        margin-left: 0;
+    }
+    .direction-rtl .blog-page-right-content {
+        margin-right: 0;
+    }
+    .sidebar-blog-item-img-wrap {
+        max-height: 54px;
+        width: 54px;
+    }
+
+    /*Become an Instructor*/
+    .counter-img-wrap img {
+        height: 60px;
+    }
+    .count-content {
+        font-size: 28px;
+        line-height: 35px;
+    }
+    .order-summary-btns .theme-btn {
+        padding: 9.5px 5px !important;
+    }
+
+    /*Checkout Page*/
+    .checkout-course-item .wishlist-item .course-img-wrap {
+        width: 65px;
+        max-height: 65px;
+    }
+    .checkout-course-item .course-item.wishlist-item {
+        width: 236px;
+    }
+
+    /*Course Single*/
+    .course-single-details-right-content {
+        margin-top: -266px;
+        margin-left: 10px;
+    }
+    .direction-rtl .course-single-details-right-content {
+        margin-right: 10px;
+    }
+    .course-info-box-wishlist-btns .theme-btn {
+        padding: 10px 8px !important;
+        font-size: 13px !important;
+    }
+    .barra {
+        width: 260px;
+    }
+    /*Course watch*/
+    .course-watch-page-area .container-fluid {
+        padding: 0 50px;
+    }
+    .course-watch-inner-title-left-part h4 {
+        font-size: 28px;
+    }
+    .faq-tab-nav-wrap .nav-tabs .nav-link {
+        min-height: 280px;
+        padding: 30px;
+    }
+    .quiz-answer-progress-bar {
+        flex-direction: column;
+    }
+    .course-watch-page-area
+        .course-details-tab-nav-wrap
+        .nav-tabs
+        .nav-link.active::after {
+        top: 17px;
+    }
+
+    /*Instructor Dashboard*/
+    #progressbar li {
+        width: 28%;
+    }
+    .recently-added-course-item {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+    .recently-added-course-item-right {
+        margin-left: 0 !important;
+        margin-top: 13px;
+    }
+    .direction-rtl .recently-added-course-item-right {
+        margin-right: 0 !important;
+    }
+    .instructor-dashboard-top-part-icon {
+        height: 45px;
+        width: 45px;
+        font-size: 21px;
+    }
+    .instructor-dashboard-top-part-item h6 > span {
+        display: none;
+    }
+    .instructor-my-courses-btns {
+        flex-wrap: wrap;
+    }
+    .instructor-my-courses-btns {
+        justify-content: flex-end;
+    }
+    .direction-rtl .instructor-my-courses-btns {
+        justify-content: flex-start;
+    }
+    .instructor-my-course-item-left {
+        width: 90%;
+    }
+    .instructor-details-avatar-wrap {
+        height: 100px;
+        width: 100px;
+    }
+    .instructor-details-avatar-wrap img {
+        height: 100px;
+    }
+    /*Message Page*/
+    .message-chat-bottom-left .input-group {
+        width: 500px;
+    }
+    .message-user-sidebar .message-user-item {
+        padding: 12px 30px 12px 18px;
+    }
+    .direction-rtl .message-user-sidebar .message-user-item {
+        padding: 12px 18px 12px 30px;
+    }
+
+    /* Insturctor Course Page */
+    .instructor-courses-info-duration-wrap {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+    .instructor-my-course-item {
+        min-height: 190px;
+        height: 190px;
+    }
+    .instructor-my-course-item .course-img-wrap img {
+        height: auto;
+        width: 100%;
+    }
+    /* Insturctor Course Page End */
+
+    /* Live Class CSS */
+    .instructor-live-class-page .notice-board-action-btns,
+    .instructor-notice-board-page .notice-board-action-btns {
+        width: 277px;
+    }
+    .instructor-live-class-page table th,
+    .instructor-notice-board-page table th {
+        min-width: 190px;
+    }
+    .instructor-live-class-page table td,
+    .instructor-notice-board-page table td {
+        min-width: 260px;
+    }
+    /* Live Class CSS */
+
+    /* Notice List Page */
+    .instructor-notice-list-page table td {
+        min-width: 380px;
+    }
+    /* Notice List Page */
+
+    /* All Student Page */
+    .instructor-all-student-page table td {
+        min-width: 271px;
+    }
+    /* All Student Page */
+
+    /* Course Watch Page */
+    .notice-board-box-item {
+        margin-bottom: 30px;
+    }
+    .course-watch-notice-board-wrap .row {
+        padding: 50px 20px 3px;
+    }
+    .course-watch-right-accordion-wrap {
+        max-height: 303px;
+    }
+    /* Course Watch Page */
+
+    /* Instructor Certificate */
+    .instructor-certificate-template-page .certificate-list {
+        text-align: center;
+    }
+    /* Instructor Certificate */
+
+    /* Wishlist Page */
+    .wishlist-add-to-cart-btn .theme-button {
+        min-width: 139px;
+    }
+    .wishlist-item .course-img-wrap {
+        width: 160px;
+    }
+    .course-item.wishlist-item {
+        width: 349px;
+    }
+    /* Wishlist Page */
+
+    /* Courses Bundles pages */
+    .courses-bundles-course-item .course-img-wrap {
+        width: 34%;
+    }
+    .courses-bundles-course-item .card-body {
+        padding: 25px 20px 20px;
+    }
+    /* Courses Bundles pages */
+
+    /* Create Bundles Page */
+    .create-bundles-courses-check-btn {
+        width: 8%;
+    }
+    .create-bundles-course-item .instructor-my-course-item-left {
+        width: 100%;
+    }
+    /* Create Bundles Page */
+
+    /* Forum Pages */
+    .forum-banner-search-ask-wrap .input-group {
+        width: 287px;
+    }
+
+    .forum-likes-tabs .nav-pills .nav-link,
+    .forum-nav-list-title {
+        padding: 16px 15px;
+        font-size: 16px !important;
+    }
+    .forum-details-rightside.sticky-top {
+        padding-left: 30px;
+    }
+    .direction-rtl .forum-details-rightside.sticky-top {
+        padding-left: 0;
+        padding-right: 30px;
+    }
+    /* Forum Pages */
+
+    /* Organization Dashboard */
+    .organization-top-seller-box {
+        height: 100%;
+    }
+    /* Organization Dashboard */
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+    .create-certificate-browse-file.form-control p {
+        font-size: 12px;
+    }
+    /* Dashboard Ranking */
+    .ranking-item-right .ranking-content-in-right {
+        margin-left: 20px;
+    }
+    .direction-rtl .ranking-item-right .ranking-content-in-right {
+        margin-right: 20px;
+    }
+    .ranking-content-in-right {
+        margin-left: 10px;
+    }
+    .direction-rtl .ranking-content-in-right {
+        margin-right: 10px;
+    }
+    .ranking-item-right {
+        padding-left: 30px;
+    }
+    .direction-rtl .ranking-item-right {
+        padding-right: 30px;
+    }
+
+    .recently-added-courses-box .ranking-item-right {
+        padding-left: 18px;
+    }
+    .direction-rtl .recently-added-courses-box .ranking-item-right {
+        padding-right: 18px;
+    }
+    .recently-added-courses-box .ranking-item-right .ranking-content-in-right {
+        margin-left: 16px !important;
+    }
+    .direction-rtl
+        .recently-added-courses-box
+        .ranking-item-right
+        .ranking-content-in-right {
+        margin-right: 16px !important;
+    }
+    /* Dashboard Ranking */
+
+    /* Instructor My Course Page */
+    .instructor-my-course-item .course-tag.badge {
+        padding: 7px 10px;
+    }
+    .instructor-my-course-item .course-tag.publish-badge,
+    .instructor-my-course-item .course-tag.unpublish-badge,
+    .instructor-my-course-item .course-tag.badge {
+        font-size: 12px;
+    }
+    /* Instructor My Course Page */
+
+    /* Watch Video/ All Video Player */
+    .youtubePlayer .xdPlayer {
+        height: 400px;
+    }
+    .vimeoPlayer .xdPlayer {
+        height: 427px;
+    }
+    /* Watch Video/ All Video Player */
+}
+@media only screen and (min-width: 1200px) and (max-width: 1366px) {
+    #mainNav {
+        padding: 21px 40px;
+    }
+    .menu-language-btn > a {
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+    .menu-round-btn > a {
+        margin-right: 15px;
+    }
+    .direction-rtl .menu-round-btn > a {
+        margin-left: 15px;
+    }
+    /*Sign In*/
+    .sign-up-left-content p {
+        padding-right: 0;
+    }
+    .direction-rtl .sign-up-left-content p {
+        padding-left: 0;
+    }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1300px) {
+    .vimeoPlayer {
+        height: 427px;
+        position: relative;
+    }
+    .vimeoPlayer .xdPlayer {
+        height: auto;
+        top: -16px;
+        position: absolute;
+    }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1240px) {
+    .header-nav-left-side form {
+        width: 248px;
+    }
+}
+
+/*Default for Max 1366px Width Devices*/
+@media only screen and (max-width: 1366px) {
+    body {
+        font-size: 14px;
+    }
+    /* Menu CSS */
+    #mainNav .navbar-nav .dropdown-menu a {
+        font-size: 14px;
+    }
+    .theme-button {
+        font-size: 16px;
+    }
+
+    /*Faq Page*/
+    .faq-area-shape {
+        display: none;
+    }
+
+    /*Course Watch*/
+    .course-watch-inner-title-right-part button {
+        padding: 9.5px 10px !important;
+        font-size: 14px !important;
+    }
+    /*Instructor Dashobard*/
+
+    /* Create Bundles Page */
+    .create-bundles-courses-check-btn .form-check-input {
+        height: 1.7em;
+    }
+    /* Create Bundles Page */
+
+    /* Forum Pages */
+    .forum-link-box-title {
+        font-size: 17px;
+    }
+    .forum-link-box li a {
+        font-size: 16px;
+    }
+    /* Forum Pages */
+
+    /* Consultation booking */
+    #consultationBookingModal .consultantion-calendar-box label {
+        margin-right: 10px;
+    }
+    .ui-datepicker-calendar tbody tr td,
+    .ui-datepicker-next.ui-corner-all {
+        width: 32px !important;
+        font-size: 13px;
+    }
+    /* Consultation booking */
+}
+
+/*--------Max 1200px Width Screen---------*/
+
+@media only screen and (max-width: 1200px) {
+    /*Course Slider area*/
+    .courses-area .section-left-title-with-btn {
+        flex-direction: column;
+        align-items: self-start !important;
+    }
+    /*top-categories-area*/
+    .top-cat-item {
+        margin-bottom: 20px;
+    }
+    /*Course watch*/
+    .course-watch-inner-title-wrap {
+        flex-direction: column;
+    }
+    .course-watch-inner-title-wrap .publish-update-time {
+        text-align: left !important;
+    }
+    .direction-rtl .course-watch-inner-title-wrap .publish-update-time {
+        text-align: right !important;
+    }
+    .course-watch-inner-title-right-part button {
+        margin-top: 18px;
+        margin-bottom: 10px !important;
+    }
+    .course-watch-page-area .what-you-learn-list-wrap,
+    .course-single-details-area .what-you-learn-list-wrap {
+        flex-direction: column;
+    }
+    .course-watch-no-video-img {
+        height: 400px;
+    }
+}
+
+/*=====================================
+  For Medium Screen
+========================================*/
+
+@media only screen and (max-width: 1199.98px) {
+    .section-heading {
+        font-size: 34px;
+    }
+    .section-title.section-title-left {
+        width: 100%;
+    }
+    .home-page-faq-area .section-heading {
+        width: 100%;
+    }
+
+    /*Hero Area*/
+    .hero-heading {
+        font-size: 48px;
+    }
+    .come-for-learn-text {
+        width: 83%;
+    }
+    .top-instructor-area .section-left-title-with-btn {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+    .top-instructor-area .section-heading-img {
+        display: none;
+    }
+
+    /*Achievement*/
+    .achievement-item {
+        margin-bottom: 30px;
+    }
+    .achievement-content-area div:nth-child(3) .achievement-item,
+    .achievement-content-area div:nth-child(4) .achievement-item {
+        margin-bottom: 0;
+    }
+    .instructor-support-item {
+        padding: 30px 30px;
+    }
+    /*Footer CSS*/
+    .footer-payment,
+    .footer-bottom-nav {
+        /* display: none; */
+        text-align: center;
+    }
+    .footer-bottom-nav ul {
+        justify-content: center !important;
+    }
+    .footer-bottom-nav ul li a {
+        padding: 0 7px;
+    }
+
+    /*About page*/
+    .container-timeline {
+        text-align: center;
+        padding-top: 15px;
+    }
+    .our-history-area .section-title {
+        width: 100%;
+    }
+    .history-year:after {
+        top: 37px;
+        left: 49.7%;
+    }
+    .direction-rtl .history-year:after {
+        right: 49.7%;
+    }
+    .history-year:before {
+        top: 24px;
+    }
+    .upgrade-skills-right {
+        padding-right: 0;
+    }
+    .direction-rtl .upgrade-skills-right {
+        padding-left: 0;
+    }
+
+    /*Become an instructor page*/
+    .become-instructor-feature-item {
+        min-height: 325px;
+        padding: 40px 30px;
+    }
+    /*Become an instructor page*/
+
+    /*Cart page*/
+    .order-summary-btns .theme-btn {
+        font-size: 12px !important;
+    }
+
+    /*Course Single*/
+    .course-single-details-right-content {
+        margin-top: -226px;
+        margin-left: 0;
+    }
+    .direction-rtl .course-single-details-right-content {
+        margin-right: 0;
+    }
+    .course-info-box-wishlist-btns .theme-btn {
+        padding: 10px 7px !important;
+        font-size: 12px !important;
+        margin: 0 3px !important;
+    }
+    .barra {
+        width: 180px;
+    }
+
+    /*course watch*/
+
+    /* befor purchase */
+    .course-single-banner-content {
+        width: 100%;
+    }
+    /* befor purchase */
+
+    .course-single-details-area.course-watch-page-area .barras {
+        width: 88%;
+        margin-left: 0;
+    }
+    .direction-rtl .course-single-details-area.course-watch-page-area .barras {
+        margin-right: 0;
+    }
+    .course-watch-page-area.course-single-details-area .review-tab-top-part {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+    .course-watch-page-area.course-single-details-area
+        .review-progress-bar-wrap {
+        margin-left: 0;
+        margin-top: 28px;
+    }
+    .direction-rtl
+        .course-watch-page-area.course-single-details-area
+        .review-progress-bar-wrap {
+        margin-right: 0;
+    }
+    .error-content {
+        padding: 0 15%;
+    }
+    /*faq*/
+    .faq-tab-nav-wrap .nav-tabs .nav-link {
+        min-height: auto;
+        padding: 20px;
+    }
+    .faq-tab-nav-item.bg-white .faq-tab-nav-img-wrap,
+    .faq-tab-nav-item.bg-white p {
+        display: none;
+    }
+    .faq-tab-nav-item h6 {
+        font-size: 18px;
+    }
+    .faq-tab-nav-wrap .nav-tabs .nav-link {
+        padding: 15px;
+    }
+
+    /* FAQ Page Only */
+    .faq-page-area .faq-tab-nav-wrap .tab-nav-list {
+        width: 100%;
+    }
+    /* FAQ Page Only */
+
+    /*Instructor Dashboard*/
+    .instructor-profile-left-part ul li a {
+        padding: 7px 13px;
+    }
+    #progressbar li {
+        width: 31%;
+    }
+    .recently-added-courses-title {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+    .recently-added-courses-title button {
+        margin-top: 10px;
+    }
+    .instructor-dashboard-top-part-icon {
+        height: 45px;
+        width: 45px;
+        font-size: 21px;
+    }
+    .instructor-dashboard-top-part-item {
+        padding: 25px;
+    }
+    .instructor-my-course-item .card-body {
+        flex-direction: column;
+    }
+    .instructor-my-course-item-right {
+        width: 100%;
+        text-align: left;
+        margin-left: 0;
+    }
+    .direction-rtl .instructor-my-course-item-right {
+        text-align: right;
+        margin-right: 0;
+    }
+    .instructor-my-courses-btns button {
+        margin-left: 0 !important;
+        margin-right: 15px;
+    }
+    .direction-rtl .instructor-my-courses-btns button {
+        margin-right: 0 !important;
+        margin-left: 15px;
+    }
+    .instructor-details-area .instructor-info-box {
+        padding: 40px 30px;
+    }
+    .instructor-details-left-inner-box {
+        margin-bottom: 30px;
+        padding: 40px 30px;
+    }
+    .instructor-quiz-list-page.instructor-certificate-page table td {
+        min-width: 346px;
+    }
+    /* Organization Single Page */
+    .organization-single-tab-area {
+        padding: 10px 0 25px;
+    }
+    .organization-single-tab-area .tab-content {
+        padding: 30px;
+    }
+    /* Organization Single Page */
+
+    /*Message Page*/
+    .message-chat-bottom-left .input-group {
+        width: 330px;
+    }
+
+    /*Upload Course*/
+    #upload-course-overview-2 .main-upload-video-processing-img-wrap {
+        height: 253px;
+    }
+    /*Upload Course*/
+
+    /*Sign In*/
+    .sign-up-left-content p {
+        padding-right: 0;
+        font-size: 24px;
+    }
+    .direction-rtl .sign-up-left-content p {
+        padding-left: 0;
+    }
+    .sign-up-bottom-img {
+        margin-top: 100px;
+    }
+    .sign-up-left-content {
+        padding: 30px 50px;
+    }
+
+    /* Instructor Quiz All Pages Start */
+    .instructor-quiz-list-page table td {
+        min-width: 169px;
+        /* width: 100%; */
+    }
+    /* Instructor Quiz All Pages End */
+
+    /* Notice List Page */
+    .instructor-resources-page table td {
+        min-width: 262px;
+    }
+    .instructor-notice-list-page table td {
+        min-width: 380px;
+    }
+    /* Notice List Page */
+
+    /* All Student Page */
+    .instructor-all-student-page table td {
+        min-width: 271px;
+    }
+    /* All Student Page */
+
+    /* Instructor Live Class page */
+    .instructor-live-class-page table td,
+    .instructor-notice-board-page table td {
+        min-width: 244px;
+    }
+    /* Instructor Live Class page */
+
+    /* Course Single Details Start */
+    .meet-your-instructor-left {
+        margin-bottom: 30px;
+    }
+    .meet-your-instructor-right {
+        margin-bottom: 20px;
+    }
+    .ranking-item-left {
+        width: 50%;
+    }
+    /* Course Single Details End */
+
+    /* Instructor Ranking */
+    .recently-added-courses-title a {
+        display: inline-block;
+        margin-top: 15px;
+    }
+    .instructor-ranking-badge-page .ranking-badge-page-side-box {
+        border-right: 0;
+        margin-bottom: 45px;
+    }
+    .direction-rtl .instructor-ranking-badge-page .ranking-badge-page-side-box {
+        border-left: 0;
+    }
+    /* Instructor Ranking */
+
+    /* Instructor Discussion Page */
+    .instructor-disscussion-page-leftside {
+        margin-bottom: 30px;
+    }
+    /* Instructor Discussion Page */
+
+    /* Instructor Panel consultation Page */
+    .consultation-instructor-item .course-img-wrap img {
+        min-width: 100%;
+    }
+    /* Instructor Panel consultation Page */
+
+    /* Forum Pages */
+    .forum-banner-content .page-banner-sub-heading {
+        width: 90%;
+    }
+    .forum-likes-tabs .nav-pills .nav-link,
+    .forum-nav-list-title {
+        padding: 14px 14px;
+        font-size: 14px !important;
+    }
+    .forum-categories-right {
+        margin-top: 30px;
+    }
+    .forum-details-rightside.sticky-top {
+        padding: 0;
+    }
+    /* Forum Pages */
+
+    /* New Datatable pagination style */
+    .dataTables_info {
+        position: relative;
+        text-align: center;
+    }
+    div.dataTables_wrapper div.dataTables_paginate ul.pagination {
+        justify-content: center !important;
+    }
+    .dt-buttons.btn-group.flex-wrap {
+        display: flex;
+        width: 50%;
+        margin: 15px auto;
+    }
+    /* New Datatable pagination style */
+
+    /* Subscription and Saas Plan */
+    .pricing-item.most-popular-plan {
+        transform: scale(1);
+    }
+    /* Subscription and Saas Plan */
+
+    /* Certificate verify page */
+    .certificate-result-inner-box {
+        width: 100%;
+    }
+    /* Certificate verify page */
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    #mainNav {
+        padding: 21px 16px;
+    }
+    .header-nav-right-side ul li:last-child a {
+        margin-right: 0;
+    }
+    .direction-rtl .header-nav-right-side ul li:last-child a {
+        margin-left: 0;
+    }
+    #mainNav .navbar-brand {
+        margin-right: 15px;
+    }
+    .direction-rtl #mainNav .navbar-brand {
+        margin-left: 15px;
+    }
+    .header-nav-left-side {
+        padding-left: 20px;
+    }
+    .direction-rtl .header-nav-left-side {
+        padding-right: 20px;
+    }
+    .header-nav-left-side form {
+        display: none;
+    }
+    .header-nav-left-side:before {
+        height: 103px;
+    }
+
+    /* Instructor Course Page */
+    .instructor-my-course-btns {
+        width: 30%;
+    }
+    .instructor-my-course-item {
+        min-height: 190px;
+        height: 190px;
+    }
+    .instructor-my-course-item-left {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .instructor-my-course-item .course-img-wrap {
+        width: 36%;
+        min-height: auto;
+        height: 188px;
+    }
+    .instructor-my-course-item .course-img-wrap img {
+        height: auto;
+        width: 100%;
+        min-height: 188px;
+    }
+    .instructor-courses-info-duration-wrap {
+        display: none;
+    }
+    /* Instructor Course Page End */
+
+    /* Course Watch */
+    .course-watch-certificate-wrap .watch-course-tab-inside-top-heading {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+    .course-watch-certificate-download-btns {
+        margin-top: 15px;
+    }
+    /* Course Watch */
+
+    /* All Video Player */
+    .youtubePlayer .xdPlayer {
+        height: 500px;
+    }
+    .vimeoPlayer .xdPlayer {
+        height: 500px;
+    }
+    /* All Video Player */
+
+    /* Courses Bundles Pages */
+    .courses-bundles-course-item .course-img-wrap {
+        width: 72%;
+    }
+    /* Courses Bundles Pages */
+
+    /* Create Bundles Page style */
+    .create-bundles-courses-check-btn {
+        width: 9%;
+    }
+    /* Create Bundles Page style */
+}
+
+/*======================================
+      Tablet layout
+=========================================*/
+
+@media only screen and (max-width: 992.98px) {
+    .section-heading,
+    .hot-news-area .section-heading {
+        font-size: 36px;
+    }
+
+    /* menu css */
+    #mainNav .navbar-nav .nav-item .nav-link {
+        padding: 0.75em 11px;
+    }
+    .header-right-nav .theme-button1,
+    .header-right-nav .theme-button2 {
+        padding: 10px 15px;
+    }
+
+    /* Instructor Course Page */
+    .instructor-courses-info-duration-wrap {
+        display: none;
+    }
+    /* Instructor Course Page */
+}
+
+@media only screen and (min-width: 991px) {
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991.98px) {
+    /*Main Menu Bar*/
+    p {
+        font-size: 16px;
+    }
+
+    .course-img-wrap {
+        max-height: 170px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 170px;
+    }
+    .course-img-wrap img {
+        min-height: auto;
+    }
+    .course-item .card-body {
+        padding: 20px 20px 10px;
+    }
+    .course-item {
+        min-height: auto;
+    }
+    /* Courses Page Image Size CSS */
+
+    /* All Video Player */
+    .youtubePlayer .xdPlayer {
+        height: 440px;
+    }
+    .vimeoPlayer .xdPlayer {
+        height: 300px;
+        margin-bottom: 30px;
+    }
+    /* All Video Player */
+
+    /* Instructor Panel consultation Page */
+    .consultation-instructor-item .course-img-wrap img {
+        min-height: 170px;
+    }
+    /* Instructor Panel consultation Page */
+}
+
+@media only screen and (max-width: 991.98px) {
+    .section-t-space {
+        padding-top: 50px;
+    }
+    section,
+    .section-b-space,
+    .section-b-85-space {
+        padding-bottom: 50px;
+    }
+    .section-b-85-space {
+        padding-bottom: 15px;
+    }
+    .section-b-90-space {
+        padding-bottom: 50px;
+    }
+    .section-t-90-space {
+        padding-top: 50px;
+    }
+    .section-p-t-b-100 {
+        padding: 50px 0 50px;
+    }
+    .mt-100 {
+        margin-top: 50px;
+    }
+    .achievement-area {
+        padding: 50px 0;
+    }
+
+    h2.section-heading,
+    .amazing-artwork-left .section-heading,
+    .hot-news-area .section-heading {
+        font-size: 32px;
+    }
+
+    .section-sub-heading,
+    .section-heading,
+    .subscription-plan-area .section-sub-heading {
+        width: 100%;
+    }
+    .customers-says-area .section-heading {
+        width: 100% !important;
+    }
+
+    /*Menu CSS Start*/
+    #mainNav {
+        height: 80px;
+        padding: 21px 0;
+    }
+    #mainNav .navbar-nav .nav-item .nav-link {
+        padding: 0.75em 11px 0.75em 0;
+    }
+    .direction-rtl #mainNav .navbar-nav .nav-item .nav-link {
+        padding: 0.75em 0 0.75em 11px;
+    }
+    .menu-notification-tab-content,
+    .menu-notification-tab-content > .tab-pane {
+        height: auto;
+    }
+    .blank-page-banner-header .blank-page-banner-wrap {
+        margin-top: 80px;
+    }
+    .main-menu-collapse {
+        background-color: var(--heading-color);
+        top: 18px;
+        position: relative;
+        padding: 30px;
+        box-shadow: 0 0 8px 0 rgba(1, 0, 64, 0.07);
+        overflow-y: auto;
+        height: calc(100vh - 80px);
+    }
+    .header-nav-left-side {
+        padding-left: 0;
+        flex-direction: column-reverse;
+        align-items: normal;
+    }
+    .direction-rtl .header-nav-left-side {
+        padding-right: 0;
+    }
+    .header-nav-left-side form {
+        border: 2px solid var(--theme-color);
+        width: auto;
+        margin-left: 0;
+        margin-bottom: 25px;
+    }
+    .direction-rtl .header-nav-left-side form {
+        margin-right: 0;
+    }
+    #librariesDropdown {
+        max-width: 300px;
+        width: 180px;
+    }
+    .header-nav-left-side:before {
+        display: none;
+    }
+    .menu-language-btn > a {
+        margin-left: 0;
+    }
+    .direction-rtl .menu-language-btn > a {
+        margin-right: 0;
+    }
+    .menu-round-btn.menu-language-btn .dropdown-toggle:after {
+        display: none;
+    }
+    .menu-round-btn .dropdown-toggle:after {
+        display: none;
+    }
+    .menu-round-btn > a {
+        margin-bottom: 15px;
+    }
+    .menu-round-btn .dropdown-menu {
+        margin-bottom: 15px;
+    }
+    .direction-rtl .menu-user-btn a {
+        margin-right: 0;
+    }
+    .navbar .nav-item .dropdown-menu {
+        max-height: 290px;
+        overflow-y: auto;
+    }
+    /*Menu CSS End*/
+
+    /*Hero Area Start*/
+    .come-for-learn-text {
+        width: 78%;
+    }
+    /*Hero Area End*/
+
+    .play-btn {
+        height: 60px;
+        width: 60px;
+    }
+    .play-btn img {
+        height: 22px;
+    }
+
+    /*FAQ CSS */
+    .still-no-luck {
+        display: none;
+    }
+    /*FAQ CSS */
+
+    /*Special feature css*/
+    .single-feature-item {
+        flex-direction: column;
+    }
+    .feature-content {
+        margin: 25px 0 0 0 !important;
+    }
+    .direction-rtl .feature-content {
+        margin-right: 0 !important;
+    }
+    .single-feature-item {
+        padding: 20px 30px;
+    }
+    .single-feature-item h6 {
+        font-size: 18px;
+    }
+    /*Special feature css*/
+
+    /*Testimonial*/
+    .testimonial-item {
+        padding-right: 0;
+        /* margin-bottom: 30px; */
+    }
+    .direction-rtl .testimonial-item {
+        padding-left: 0;
+    }
+    .testimonial-content-wrap div:last-child .testimonial-item {
+        margin-bottom: 0;
+    }
+    .instructor-support-img-wrap {
+        height: 50px;
+        width: 50px;
+    }
+    .instructor-support-img-wrap img {
+        height: 50px;
+        width: 50px;
+    }
+    .instructor-support-item .theme-btn {
+        padding: 9.5px 9px !important;
+        font-size: 14px !important;
+    }
+
+    .client-logo-area {
+        padding-top: 50px;
+    }
+    .client-logo-item img {
+        height: 32px;
+    }
+
+    /*Footer*/
+    .footer-widget {
+        margin-bottom: 30px;
+    }
+    .footer-top-part {
+        padding: 90px 0 60px;
+    }
+    /*About page*/
+    .our-gallery-area .section-title {
+        width: 100%;
+    }
+    .gallery-img-wrapper {
+        padding: 0 0;
+    }
+    /*Blog Page*/
+    .sidebar-blog-item-img-wrap {
+        max-height: 50px;
+        width: 50px;
+    }
+    .blog-title {
+        font-size: 31px;
+        line-height: 34px;
+    }
+    .blog-slider-item .blog-item-img-wrap {
+        height: 300px;
+    }
+    .blog-item {
+        margin-bottom: 30px;
+    }
+    .blog-quote-item {
+        padding: 30px 40px 30px;
+    }
+    .blog-quote-item .blog-title {
+        font-size: 24px;
+    }
+    .leave-comment-area {
+        padding: 30px 30px;
+    }
+    .about-author {
+        padding: 45px 30px;
+    }
+    .author-img {
+        height: 70px;
+        width: 70px;
+    }
+    .author-img img {
+        height: 70px;
+    }
+    .blog-comment-item .comment-author-img {
+        width: 70px;
+        height: 70px;
+    }
+    .blog-comment-item .comment-author-img img {
+        width: 70px;
+        height: 70px;
+        min-height: 70px;
+    }
+    /*Become an instructor*/
+    .become-instructor-feature-item {
+        min-height: 300px;
+        padding: 30px 30px;
+    }
+    .become-an-instructor-procedure-item {
+        padding: 0 0 50px;
+    }
+    .become-an-instructor-procedure-item-right .section-heading {
+        padding-right: 0;
+    }
+    .direction-rtl .become-an-instructor-procedure-item-right .section-heading {
+        padding-left: 0;
+    }
+    .become-an-instructor-procedures-area
+        .row:nth-child(even)
+        .become-an-instructor-procedure-item-right
+        .section-heading {
+        padding-left: 0;
+    }
+    .direction-rtl
+        .become-an-instructor-procedures-area
+        .row:nth-child(even)
+        .become-an-instructor-procedure-item-right
+        .section-heading {
+        padding-right: 0;
+    }
+    .counter-item {
+        margin: 15px 0;
+    }
+
+    /*Wishlist Page*/
+    .wishlist-item .course-img-wrap {
+        width: 135px;
+    }
+    .course-item.wishlist-item .card-body {
+        padding: 0 0 0 15px;
+    }
+    .direction-rtl .course-item.wishlist-item .card-body {
+        padding: 0 15px 0 0;
+    }
+    .course-item.wishlist-item {
+        width: 360px;
+    }
+
+    /*Cart Page*/
+    .order-summary-box {
+        margin-top: 30px;
+    }
+
+    /*Contact*/
+    .contact-form-area,
+    .contact-page-left-side-wrap {
+        padding: 30px;
+    }
+    .google-map-area iframe {
+        height: 329px;
+    }
+    /*Courses Page*/
+    .filter-bar-right {
+        text-align: left !important;
+        margin-top: 20px;
+    }
+    .direction-rtl .filter-bar-right {
+        text-align: right !important;
+    }
+
+    .instructors-filter-bar .filter-bar-right {
+        text-align: right !important;
+    }
+    .instructors-filter-bar .filter-bar-right {
+        text-align: right !important;
+    }
+
+    .direction-rtl .instructors-filter-bar .filter-bar-right {
+        text-align: left !important;
+    }
+
+    /*Course Single*/
+    .course-single-details-area .container > .row {
+        flex-direction: column-reverse;
+    }
+    .course-single-details-right-content {
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+    /*Course Watch*/
+    .course-watch-right-content {
+        margin-bottom: 30px;
+    }
+    .course-info-box-wishlist-btns {
+        justify-content: flex-start;
+    }
+    /*Wishlist*/
+    .wishlist-page-area td {
+        min-width: 148px;
+    }
+    /*Sign In*/
+    .sign-up-right-content form {
+        width: 100%;
+        margin-right: 30px;
+    }
+    .direction-rtl .sign-up-right-content form {
+        margin-left: 30px;
+    }
+    .sign-up-left-content p {
+        font-size: 22px;
+    }
+    /*Student dashboard*/
+    .student-profile-right-part {
+        border-left: 1px solid #f7f5ff;
+        padding: 40px 60px;
+    }
+    .direction-rtl .student-profile-right-part {
+        border-right: 1px solid #f7f5ff;
+    }
+    .student-profile-left-part {
+        padding: 40px 0;
+    }
+    .student-profile-left-part {
+        border-right: 1px solid #f7f5ff;
+    }
+    .direction-rtl .student-profile-left-part {
+        border-left: 1px solid #f7f5ff;
+    }
+
+    /*Instructor Dashboard*/
+    .instructor-profile-left-part-wrap {
+        border-right: none;
+        border-bottom: 1px solid #ebebeb;
+    }
+    .direction-rtl .instructor-profile-left-part-wrap {
+        border-left: none;
+    }
+    .instructor-profile-info-box {
+        margin-bottom: 20px;
+    }
+    .instructor-dashboard-top-part-item {
+        border: 1px solid #ededed;
+        padding: 25px;
+        box-shadow: 0 2px #ededed;
+        min-height: 118px;
+    }
+    .instructor-dashboard-top-part-item h5 {
+        font-size: 21px;
+    }
+    .instructor-dashboard-top-part-icon {
+        height: 43px;
+        width: 43px;
+        font-size: 20px;
+    }
+    .instructor-add-card-img-wrap img {
+        height: 128px;
+    }
+    .instructor-details-area .instructor-details-main-row {
+        flex-direction: column-reverse;
+    }
+    .instructor-details-right-img-box {
+        padding-bottom: 30px;
+    }
+    .my-courses-page .filter-bar-right {
+        margin-top: 0;
+    }
+    .instructor-details-left-inner-box {
+        margin-right: 0;
+        margin-top: 25px;
+    }
+    .direction-rtl .instructor-details-left-inner-box {
+        margin-left: 0;
+    }
+    .instructor-my-course-item {
+        min-height: 190px;
+        height: auto;
+        flex-direction: column;
+    }
+    .instructor-my-course-item .course-img-wrap {
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 4px;
+        width: 100%;
+        height: auto;
+    }
+    .instructor-my-course-item .course-img-wrap img {
+        height: auto;
+        width: 100%;
+    }
+    .instructor-my-course-btns {
+        padding: 0px 15px 20px;
+        width: 100%;
+        text-align: left;
+    }
+    .direction-rtl .instructor-my-course-btns {
+        text-align: right;
+    }
+    .instructor-course-btn {
+        min-width: 135px;
+        padding: 9.5px 13px !important;
+        font-size: 14px !important;
+        margin-right: 10px;
+    }
+    .direction-rtl .instructor-course-btn {
+        margin-left: 10px;
+    }
+
+    /* Instructor Payment Settings */
+    .add-paypal-payment-box {
+        margin-top: 30px;
+    }
+    /* Instructor Payment Settings */
+
+    /*Message Page*/
+    .message-user-sidebar {
+        margin-bottom: 30px;
+    }
+
+    /* Sign Up page */
+    .sign-up-page .row .col-md-5,
+    .sign-up-page .row .col-md-7 {
+        padding-right: calc(var(--bs-gutter-x) * 0.5);
+        padding-left: calc(var(--bs-gutter-x) * 0.5);
+    }
+    .direction-rtl .sign-up-page .row .col-md-5,
+    .direction-rtl .sign-up-page .row .col-md-7 {
+        padding-left: calc(var(--bs-gutter-x) * 0.5);
+        padding-right: calc(var(--bs-gutter-x) * 0.5);
+    }
+
+    /* Empty Data Show CSS */
+    .empty-data p {
+        width: 100%;
+    }
+    /* Empty Data Show CSS */
+
+    /* Course Watch Tabs */
+    .course-details-tab-nav-wrap .nav-tabs .nav-link.active::after {
+        display: none;
+    }
+    .course-tab-nav-wrap .nav-tabs .nav-item.show .nav-link,
+    .course-tab-nav-wrap .nav-tabs .nav-link.active {
+        color: var(--theme-color) !important;
+    }
+    /* Course Watch Tabs */
+
+    /* Create Certificate Page */
+    .create-certificate-row {
+        flex-direction: column-reverse;
+    }
+    .create-certificate-sidebar {
+        margin-top: 30px;
+    }
+    /* Create Certificate Page */
+
+    /* Ticket Details page */
+    .ticket-details-right-part {
+        margin-top: 20px;
+    }
+    /* Ticket Details page */
+
+    /* Create bundles courses page */
+    .create-bundles-course-item .card-body {
+        padding: 20px 20px 20px;
+    }
+    .create-bundles-courses-check-btn {
+        justify-content: flex-end;
+        position: absolute;
+        bottom: 0;
+    }
+    /* Create bundles courses page */
+
+    /* Forum Pages */
+    .forum-banner-search-ask-wrap {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+    .forum-banner-search-ask-wrap p {
+        padding: 10px 0 !important;
+    }
+    .forum-details-bottom .reply-btn {
+        margin-left: 0;
+    }
+    .direction-rtl .forum-details-bottom .reply-btn {
+        margin-right: 0;
+    }
+    /* Forum Pages */
+
+    /* Affiliator Pages */
+    .affiliate-table-pagination-wrap {
+        flex-direction: column;
+    }
+    .affiliate-export-btns {
+        justify-content: flex-start !important;
+    }
+    .affiliate-top-title-btns {
+        text-align: left !important;
+        margin-top: 15px;
+    }
+    .affiliate-top-title-btns .theme-btn {
+        margin: 5px 5px 5px 0;
+    }
+    .direction-rtl .affiliate-top-title-btns {
+        text-align: right !important;
+    }
+    .direction-rtl .affiliate-top-title-btns .theme-btn {
+        margin: 5px 0 5px 5px;
+    }
+    /* Affiliator Pages */
+
+    /* Subscription Plan Page */
+    .pricing-tab-nav {
+        margin-bottom: 30px;
+    }
+    /* Subscription Plan Page */
+
+    /* Footer */
+    .copyright-text {
+        margin-top: 15px;
+        margin-bottom: 5px;
+    }
+    /* Footer */
+
+    /* About Page */
+    .upgrade-skills-left {
+        padding-left: 0;
+    }
+    .direction-rtl .upgrade-skills-left {
+        padding-right: 0;
+    }
+    /* About Page */
+}
+
+@media only screen and (max-width: 768.98px) {
+    /* Course Watch */
+    .leatherboard-item {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+    .leatherboard-left,
+    .leatherboard-right {
+        width: 100%;
+    }
+    /* Course Watch */
+}
+
+/*=======================================
+      For Small Devices
+=========================================*/
+@media only screen and (max-width: 767.98px) {
+    .section-heading {
+        font-size: 34px;
+        line-height: 41px;
+    }
+
+    /* Hero area */
+    .hero-heading {
+        font-size: 41px;
+    }
+    .hero-right-side {
+        margin-top: 30px;
+    }
+    .come-for-learn-text {
+        width: 60%;
+    }
+    /*Hero Area*/
+    /*Special feature*/
+    .special-feature-area .single-feature-item {
+        margin-top: 30px;
+    }
+    .top-categories-content-wrap .single-feature-item {
+        margin-bottom: 20px;
+    }
+
+    /*Instructor Area*/
+    .top-instructor-content-wrap div:last-child .instructor-item {
+        margin-top: 0 !important;
+    }
+    .video-area .video-area-right {
+        margin-top: 30px;
+    }
+    .video-floating-img-wrap img {
+        display: none;
+    }
+
+    .achievement-content-area div:nth-child(3) .achievement-item {
+        margin-bottom: 30px;
+    }
+    .course-instructor-support-area .section-heading {
+        width: 100% !important;
+    }
+
+    .instructor-support-item {
+        margin-bottom: 30px;
+    }
+    .course-instructor-support-wrap div:last-child .instructor-support-item {
+        margin-bottom: 0;
+    }
+    .upgrade-skills-right {
+        margin-top: 30px;
+    }
+    /*Blog Page*/
+    .blog-page-right-content {
+        margin-top: 30px;
+    }
+
+    /*Become an Instructor*/
+    .become-an-instructor-procedure-item-right {
+        margin-left: 0;
+        margin-top: 30px;
+    }
+    .direction-rtl .become-an-instructor-procedure-item-right {
+        margin-right: 0;
+    }
+    .become-instructor-feature-item {
+        margin-bottom: 20px;
+    }
+    .become-instructor-call-to-action {
+        margin-top: 30px;
+    }
+
+    /*Checkout Page*/
+    .payment-method-card-box label {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .payment-card-list {
+        margin-top: 10px;
+    }
+
+    /*Contact Page*/
+    .contact-form-area {
+        border-left: none;
+        border-top: 1px solid #ebe9e2;
+    }
+    .direction-rtl .contact-form-area {
+        border-right: none;
+    }
+    .google-map-area {
+        padding-top: 30px;
+    }
+    /*Course Single*/
+    .course-single-details-area .tab-pane {
+        padding: 30px 30px;
+    }
+    .barras {
+        width: 80%;
+    }
+    .review-tab-count-box {
+        padding: 17px;
+    }
+    /*FAQ*/
+    .faq-tab-nav-wrap .nav-tabs .nav-link {
+        margin-bottom: 10px;
+    }
+    .faq-tab-nav-item h6 {
+        text-align: left;
+    }
+    .direction-rtl .faq-tab-nav-item h6 {
+        text-align: right;
+    }
+    /*Instructor Dashboard*/
+    #progressbar li:after {
+        right: -91px;
+    }
+    .direction-rtl #progressbar li:after {
+        left: -91px;
+    }
+    .certificate-awards-box .row .certificate-awards-inner:first-child {
+        margin-bottom: 30px;
+    }
+
+    /*Message*/
+    .message-chat-bottom-left .input-group {
+        width: 225px;
+    }
+
+    /*Sign In*/
+    .sign-up-left-content p {
+        margin-top: 50px;
+        font-size: 19px;
+    }
+    .sign-up-left-content,
+    .sign-up-right-content {
+        min-height: auto;
+        height: auto;
+    }
+    .sign-up-bottom-img img {
+        width: 250px;
+    }
+    .sign-up-bottom-img {
+        margin-top: 30px;
+    }
+    .sign-up-right-content form {
+        margin-right: 0;
+        padding: 30px;
+    }
+    .direction-rtl .sign-up-right-content form {
+        margin-left: 0;
+    }
+
+    /*Upload Course*/
+    .upload-introduction-box-content-left {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+    .common-upload-lesson-btn,
+    .common-upload-video-btn {
+        margin-left: 0 !important;
+        margin-top: 5px;
+    }
+    .direction-rtl .common-upload-lesson-btn,
+    .common-upload-video-btn {
+        margin-right: 0 !important;
+    }
+    .upload-course-video-4-wrap.upload-introduction-box-content-left {
+        align-items: center !important;
+    }
+    .main-upload-video-processing-item {
+        flex-direction: column;
+    }
+    .main-upload-video-processing-img-wrap {
+        margin: 0 auto;
+    }
+    .upload-course-video-6
+        .video-upload-final-item
+        .main-upload-video-processing-img-wrap {
+        margin: 0 auto;
+    }
+    .upload-course-video-6-duration-count {
+        display: none !important;
+    }
+    .upload-course-video-6-text {
+        margin-left: 0 !important;
+    }
+    .direction-rtl .upload-course-video-6-text {
+        margin-right: 0 !important;
+    }
+    .form-last-step {
+        width: 100%;
+    }
+    .course-details-tab-nav-wrap .tab-nav-list.nav-tabs .nav-link {
+        margin-left: 10px;
+    }
+    .direction-rtl
+        .course-details-tab-nav-wrap
+        .tab-nav-list.nav-tabs
+        .nav-link {
+        margin-right: 10px;
+    }
+
+    /* Instructor Quiz All Pages CSS End */
+    .quiz-list-page-top-right {
+        display: none;
+    }
+    /* Instructor Quiz All Pages CSS Start */
+
+    /* Course Details Page */
+    .editor-wrap .tox .tox-tbtn {
+        width: 42px !important;
+    }
+    /* Course Details Page */
+
+    /* Insturctor Course Page */
+    .instructor-my-course-item .course-img-wrap img {
+        min-height: auto;
+    }
+    /* Insturctor Course Page */
+
+    /* Consultation page */
+    .consultation-schedule-day {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    /* Consultation page */
+
+    /* Courses Bundles Pages */
+    .courses-bundles-course-item {
+        flex-direction: column;
+        border: none;
+    }
+    .courses-bundles-course-item .course-img-wrap {
+        width: 100%;
+    }
+    /* Courses Bundles Pages */
+
+    /* Forum Pages */
+
+    /* Main Forum home Page */
+    .page-banner-content.forum-banner-content {
+        padding-bottom: 80px;
+    }
+    .forum-banner-content .page-banner-sub-heading {
+        width: 100%;
+    }
+    .forum-banner-right-img {
+        display: none;
+    }
+    /* Main Forum home Page */
+
+    .forum-categories-area .single-feature-item {
+        margin-top: 0;
+    }
+    .forum-category-single-item {
+        flex-direction: column;
+    }
+    .forum-category-single-item-right {
+        margin-left: 0 !important;
+        margin-top: 15px;
+    }
+    .forum-category-single-item-bottom-right li {
+        margin-left: 0;
+        margin-right: 20px;
+    }
+    .forum-category-single-item-bottom {
+        flex-direction: column;
+    }
+    .forum-category-single-item-bottom-left {
+        margin-bottom: 15px;
+    }
+    .forum-category-single-item-bottom-left li {
+        margin-top: 10px;
+    }
+    /* Forum Pages */
+
+    /* Forum details page */
+    .forum-details-bottom .forum-category-single-item-bottom-right li {
+        margin-left: 0;
+    }
+    .forum-details-bottom .reply-btn {
+        margin-left: 0;
+    }
+    .forum-details-top-left .forum-category-single-item-img-wrap {
+        width: 40px;
+        height: 40px;
+    }
+    .forum-details-item-top {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .forum-details-top-right {
+        margin-top: 15px;
+    }
+    .forum-details-top-left h6 {
+        font-size: 17px;
+    }
+    .direction-rtl .forum-details-bottom .reply-btn {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .forum-details-bottom .forum-category-single-item-bottom-right li {
+        margin-left: 0;
+        margin-right: 20px;
+    }
+    .forum-details-rightside {
+        display: none;
+    }
+    /* Forum details page */
+
+    /* Consultation booking form */
+    #consultationBookingModal .consultantion-calendar-box label {
+        margin-right: 28px;
+    }
+    .consultation-select-date-hour {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #consultationBookingModal .consultantion-hours-box label {
+        margin-right: 74px;
+    }
+    #consultationBookingModal .consultantion-hours-box {
+        margin-top: 15px;
+    }
+    /* Consultation booking form */
+
+    /* New Datatable pagination style */
+    .dt-buttons.btn-group.flex-wrap {
+        width: 100%;
+        display: inline-flex;
+    }
+    /* New Datatable pagination style */
+
+    /* Certificate Verify page */
+    .certificate-check-form {
+        margin-top: 20px;
+    }
+    /* Certificate Verify page */
+}
+
+/*========================================
+        For large mobile
+=========================================*/
+
+@media only screen and (max-width: 766.98px) {
+    .course-watch-no-video-img {
+        height: 300px;
+    }
+}
+@media only screen and (min-width: 480px) and (max-width: 766px) {
+    /* All Video Player */
+    .vimeoPlayer .xdPlayer {
+        height: 260px;
+        margin-bottom: 30px;
+    }
+    /* All Video Player */
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .instructor-my-course-item .course-img-wrap {
+        height: 175px;
+    }
+    .instructor-my-course-item .card-title {
+        min-height: 85px;
+    }
+
+    /* All Video Player */
+    .youtubePlayer .xdPlayer {
+        height: 350px;
+    }
+    /* All Video Player */
+
+    /* Course Item */
+    .course-img-wrap {
+        min-height: 200px;
+    }
+    .course-img-wrap img {
+        min-height: 200px;
+    }
+    /* Course Item */
+}
+
+@media only screen and (max-width: 575.98px) {
+    .section-title,
+    .top-famous-nft-authors-area .section-title,
+    .section-sub-heading {
+        width: 100%;
+    }
+    /*Hero Area Start*/
+    .come-for-learn-text {
+        width: 58%;
+    }
+    /*Hero Area End*/
+
+    /* page banner css */
+    .page-banner-para {
+        width: 100%;
+    }
+    .page-banner-header .section-overlay {
+        min-height: 323px;
+        padding: 150px 0 50px;
+    }
+    .page-banner-heading {
+        font-size: 36px;
+    }
+    /*Course Slider*/
+    .course-slider-items .owl-nav button {
+        top: 30%;
+    }
+    .course-slider-items button.owl-prev {
+        left: 0;
+    }
+    .direction-rtl .course-slider-items button.owl-prev {
+        right: 0;
+    }
+    .course-slider-items button.owl-next {
+        right: 0;
+    }
+    .direction-rtl .course-slider-items button.owl-next {
+        left: 0;
+    }
+    .footer-top-part {
+        padding: 50px 0 20px;
+    }
+
+    /*Checkout page*/
+    .billing-address-box,
+    .payment-method-box {
+        padding: 30px;
+    }
+
+    /*Course Single*/
+    .course-single-page-header .section-overlay {
+        padding: 100px 0 30px;
+    }
+    .review-tab-top-part {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+    .review-tab-count-box {
+        margin-bottom: 30px;
+    }
+    .barras {
+        margin-left: 0;
+    }
+    .direction-rtl .barras {
+        margin-right: 0;
+    }
+    .customer-review-item-img-wrap {
+        height: 50px;
+        width: 50px;
+    }
+    .customer-review-item-img-wrap img {
+        height: 50px;
+        width: 100%;
+    }
+    .course-details-tab-nav-wrap .tab-nav-list.nav-tabs .nav-link {
+        margin-left: 0;
+    }
+    .direction-rtl
+        .course-details-tab-nav-wrap
+        .tab-nav-list.nav-tabs
+        .nav-link {
+        margin-right: 0;
+    }
+
+    /*Course watch*/
+    .course-watch-page-area .container-fluid {
+        padding: 15px;
+    }
+    .course-watch-right-content .watch-course-title-right-btns {
+        display: none !important;
+    }
+    .error-img-wrap {
+        margin-bottom: 30px;
+    }
+    .student-profile-page-content .col-lg-3,
+    .student-profile-page-content .col-lg-9,
+    .instructor-dashboard-page-content .col-lg-3,
+    .instructor-dashboard-page-content .col-lg-9 {
+        /* padding: 0 15px!important; */
+        padding: 0 0 !important;
+    }
+    .student-profile-left-part {
+        padding: 30px 0;
+    }
+    .student-profile-right-part {
+        padding: 30px 30px;
+    }
+    .course-watch-page-area .pdf-reader-frame {
+        height: 400px;
+    }
+    /*Instructor Dashboard*/
+    .instructor-dashboard-two-part-join {
+        margin: 0 4px;
+    }
+    .instructor-profile-right-part {
+        padding: 15px;
+    }
+    .upload-your-course-part {
+        padding: 40px 30px 50px;
+    }
+    .pagination .page-link {
+        height: 35px;
+        width: 35px;
+    }
+
+    .all-student-info-title span {
+        float: none;
+    }
+
+    /*Upload Course*/
+    #progressbar {
+        flex-direction: column;
+    }
+    #progressbar li:after {
+        display: none;
+    }
+    #progressbar li {
+        width: 100%;
+    }
+    .stepper-action-btns {
+        flex-direction: column-reverse;
+        align-items: flex-start !important;
+    }
+    .add-more-section-btn {
+        margin-bottom: 20px;
+    }
+    .upload-introduction-box-content {
+        margin: 20px;
+        flex-direction: column;
+    }
+    .upload-introduction-box-content-left {
+        align-items: center !important;
+    }
+    .common-upload-lesson-btn,
+    .common-upload-video-btn {
+        margin-bottom: 12px;
+    }
+    .upload-introduction-title-box div.d-flex {
+        display: none !important;
+    }
+    .upload-course-video-step-item
+        #upload-course-video-6
+        .add-more-section-btn {
+        position: relative;
+    }
+    /*Upload Course*/
+
+    /*Message*/
+    .message-chat-bottom-part > div {
+        flex-direction: column-reverse;
+        align-items: flex-start !important;
+    }
+    .message-chat-bottom-right {
+        margin-left: 0 !important;
+        margin-bottom: 20px;
+    }
+    .direction-rtl .message-chat-bottom-right {
+        margin-right: 0 !important;
+    }
+    .message-chat-bottom-left,
+    .message-chat-bottom-left .input-group {
+        width: 100%;
+    }
+
+    /* Instructor Quiz All CSS Start */
+    .openion-item {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+    .instructor-add-question-page .openion-item .form-check {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+    .direction-rtl .instructor-add-question-page .openion-item .form-check {
+        margin-right: 0;
+    }
+    .instructor-add-question-page .instructor-my-courses-title {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+    .instructor-add-question-page .instructor-my-courses-title > .theme-btn {
+        margin-top: 10px;
+    }
+    /* Instructor Quiz All CSS End */
+
+    /* Empty Data Show CSS */
+    .empty-data h4 {
+        font-size: 26px;
+    }
+    .empty-data p {
+        line-height: 23px;
+        font-size: 16px;
+    }
+    .empty-data img {
+        height: 110px;
+    }
+    /* Empty Data Show CSS */
+
+    /* Course Details Discussion CSS */
+    .discussion-inner-comment-item,
+    .discussion-inner-comment-item-2,
+    .discussion-reply-block {
+        margin-left: 0;
+    }
+    .direction-rtl .discussion-inner-comment-item,
+    .direction-rtl .discussion-inner-comment-item-2,
+    .direction-rtl .discussion-reply-block {
+        margin-right: 0;
+    }
+    .add-media-editor {
+        display: none;
+    }
+    /* Course Details Discussion CSS */
+
+    /* Course Watch Tabs */
+    .leatherboard-item {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+    .leatherboard-left,
+    .leatherboard-right {
+        width: 100%;
+    }
+    .leatherboard-left {
+        justify-content: space-between;
+    }
+    .student-name {
+        min-width: 63px;
+    }
+    .leatherboard-heading {
+        font-size: 16px;
+    }
+    /* Course Watch Tabs */
+
+    /* Dashboard Ranking Design */
+    .ranking-item-right .ranking-content-in-right {
+        margin-left: 30px;
+    }
+    .direction-rtl .ranking-item-right .ranking-content-in-right {
+        margin-right: 30px;
+    }
+    /* Dashboard Ranking Design */
+
+    /* Instructor Course Page */
+    .instructor-my-course-item .course-img-wrap {
+        height: auto;
+    }
+    /* Instructor Course Page */
+
+    /* Courses Page Image Size Resize */
+    .course-img-wrap img {
+        width: 100%;
+    }
+    /* Courses Page Image Size Resize */
+
+    /* All Video Player */
+    .youtubePlayer .xdPlayer {
+        height: 300px;
+    }
+    /* All Video Player */
+
+    /* Consultation page */
+    .modal-header.consultation-select-date-hour {
+        flex-direction: column;
+    }
+    #consultationBookingModal .input-group {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    #consultationBookingModal .consultantion-hours-box {
+        width: 76% !important;
+        min-width: 310px !important;
+    }
+    #consultationBookingModal .input-group {
+        justify-content: flex-start;
+    }
+    #consultationBookingModal .consultantion-hours-box label {
+        margin-right: 75px;
+    }
+    /* Consultation page */
+
+    /* Forum Pages */
+    .forum-likes-tabs .nav-pills .nav-link,
+    .forum-nav-list-title {
+        padding: 10px 10px;
+        font-size: 13px !important;
+    }
+    .forum-author-name {
+        font-size: 15px;
+    }
+    /* Forum Pages */
+
+    /* Affiliator Pages */
+    .affiliator-dashboard-wrap {
+        padding: 30px;
+    }
+    /* Affiliator Pages */
+
+    /* Search Instructor Page */
+    .instructors-filter-bar .filter-bar-right {
+        text-align: left !important;
+    }
+    .direction-rtl .instructors-filter-bar .filter-bar-right {
+        text-align: right !important;
+    }
+    /* Search Instructor Page */
+
+    /* Verity Certificate */
+    .certificate-verify-result-box .thankyou-box {
+        padding: 0 !important;
+    }
+    /* Verity Certificate */
+}
+
+@media only screen and (max-width: 550.98px) {
+    .come-for-learn-text {
+        width: 59%;
+    }
+}
+@media only screen and (max-width: 541.98px) {
+    .come-for-learn-text {
+        width: 60%;
+    }
+}
+@media only screen and (max-width: 532.98px) {
+    .come-for-learn-text {
+        width: 67%;
+    }
+}
+@media only screen and (max-width: 520px) {
+    .history-year:after {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 452.98px) {
+    .come-for-learn-text {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 490px) {
+    /* Course Watch */
+    .course-watch-certificate-wrap .watch-course-tab-inside-top-heading {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+    .course-watch-certificate-download-btns {
+        margin-top: 15px;
+    }
+    /* Course Watch */
+}
+
+@media only screen and (max-width: 480px) {
+    .upload-your-course-part p {
+        width: 100%;
+    }
+    .my-courses-page .courses-filter-bar {
+        flex-direction: column;
+    }
+    .my-courses-page .filter-bar-right {
+        margin-top: 20px;
+    }
+    /*Course upload*/
+    .upload-course-item-block {
+        padding: 30px 10px 0;
+    }
+    .main-upload-video-processing-img-wrap {
+        height: 140px;
+        width: 190px;
+    }
+    .instructor-profile-right-part.instructor-upload-course-box-part {
+        padding: 0;
+    }
+    .main-upload-video-progress-bar-wrap .progress-hint-value {
+        flex-direction: column;
+    }
+
+    /* Course Details Discussion CSS */
+    .discussion-top-block,
+    .discussion-comment-item,
+    .discussion-comment-extra-info {
+        flex-direction: column;
+    }
+    .discussion-righ-wrap {
+        margin-top: 10px;
+    }
+    .extra-info-right div {
+        margin-left: 0;
+        margin-right: 20px;
+    }
+    .direction-rtl .extra-info-right div {
+        margin-left: 20px;
+        margin-right: 0;
+    }
+    .comment-content-part {
+        margin-top: 10px;
+    }
+    .teacher-badge {
+        margin-left: 0;
+        margin-top: 8px;
+        display: inline-block;
+    }
+    .direction-rtl .teacher-badge {
+        margin-right: 0;
+    }
+    /* Course Details Discussion CSS */
+
+    /* Course Watch Tab */
+    .quiz-progress-left {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+    .quiz-answer-progress-bar .barra {
+        margin-left: 0;
+    }
+    .direction-rtl .quiz-answer-progress-bar .barra {
+        margin-right: 0;
+    }
+    /* Course Watch Tab */
+
+    /* Instructor ranking */
+    .ranking-item {
+        flex-direction: column;
+        width: 100%;
+        border: 1px solid #e5e8ec;
+        padding: 20px;
+    }
+    .ranking-item-left,
+    .ranking-item-right {
+        width: 100%;
+    }
+    .ranking-item-left {
+        border-bottom: 1px solid #e5e8ec;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+    }
+    .ranking-item-right {
+        padding-left: 0;
+        justify-content: flex-start !important;
+    }
+    .direction-rtl .ranking-item-right {
+        padding-right: 0;
+    }
+    .ranking-item-right:after {
+        display: none;
+    }
+    .instructor-ranking-badge-page
+        .ranking-items-wrap
+        .ranking-item:not(:last-child) {
+        margin-bottom: 30px;
+    }
+    /* Instructor ranking */
+
+    /* Edit Lecture Page */
+    .edit-lecture-preview-show {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+    .see-preview-video {
+        margin-top: 10px;
+    }
+    /* Edit Lecture Page */
+
+    /* Forum Pages */
+    .forum-category-single-item-bottom-left {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+    .forum-category-single-item-bottom-right li {
+        margin-left: 0;
+        margin-right: 20px;
+    }
+    /* Forum Pages */
+
+    /* Saas Subscription plan */
+    .saas-plan-instructor-organization-nav {
+        width: 295px;
+    }
+    .saas-plan-instructor-organization-nav .nav-link {
+        width: 140px;
+    }
+    /* Saas Subscription plan */
+}
+
+/*=========================================
+      For very little mobile
+=========================================*/
+@media only screen and (max-width: 450px) {
+    .come-for-learn-text {
+        width: 71%;
+    }
+    /* Consultatio page */
+    .are-you-available-title {
+        display: block !important;
+    }
+    /* Consultatio page */
+}
+@media only screen and (max-width: 441px) {
+    .course-details-tab-nav-wrap .nav-tabs .nav-link.active::after {
+        top: 16px;
+    }
+}
+@media only screen and (max-width: 428px) {
+    .come-for-learn-text {
+        width: 78%;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .come-for-learn-text {
+        width: 81%;
+    }
+    .about-author {
+        padding: 30px 15px;
+    }
+    /* Course Details */
+    .start-conversation-btn-wrap button .iconify {
+        display: none;
+    }
+    /* Course Details */
+    /* Course watch */
+    .merit-list-crown-img-wrap {
+        margin-left: 15px;
+    }
+    .direction-rtl .merit-list-crown-img-wrap {
+        margin-right: 15px;
+    }
+
+    .course-watch-certificate-download-btns .theme-btn.default-hover-btn {
+        padding: 9.5px 12px !important;
+    }
+    .course-watch-no-video-img {
+        height: 290px;
+    }
+    /* Course watch */
+
+    /* Become an Instructor Modal */
+    .form-control[type="file"] {
+        max-width: 255px;
+    }
+    #becomeAnInstructor .modal-header {
+        padding: 1rem 1rem;
+    }
+    #becomeAnInstructor .btn-close {
+        right: 23px;
+    }
+    /* Become an Instructor Modal */
+}
+@media only screen and (min-width: 300px) and (max-width: 410px) {
+    .form-control {
+        font-size: 14px;
+    }
+    .hero-btns a {
+        margin: 7px 6px;
+    }
+    /*Become an instructor*/
+    .become-instructor-call-to-action .theme-btn {
+        padding: 9.5px 8px !important;
+        font-size: 13px !important;
+        margin-right: 20px;
+    }
+    .direction-rtl .become-instructor-call-to-action .theme-btn {
+        margin-right: 0;
+        margin-left: 20px;
+    }
+    .payment-card-list img {
+        margin: 3px 1px;
+    }
+    .page-banner-heading > img {
+        position: relative;
+        margin-left: 10px;
+    }
+    .direction-rtl .page-banner-heading > img {
+        margin-right: 10px;
+    }
+    /*Instructor Dashboard*/
+    .account-connections-btn .theme-btn {
+        padding: 9.5px 15px !important;
+        font-size: 14px !important;
+    }
+    .account-connections-btn .theme-btn img {
+        margin-right: 6px !important;
+    }
+    .direction-rtl .account-connections-btn .theme-btn img {
+        margin-left: 6px !important;
+    }
+    .modal-body {
+        padding: 1rem !important;
+    }
+
+    /* Certificate page */
+    .create-certificate-browse-file.form-control p {
+        font-size: 12px;
+    }
+    /* Certificate page */
+}
+@media only screen and (min-width: 300px) and (max-width: 479px) {
+    /*Header Area*/
+    .theme-button {
+        font-size: 13px;
+    }
+
+    h2.section-heading {
+        font-size: 28px;
+        margin-bottom: 40px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    /* Hero area */
+    .hero-heading {
+        font-size: 40px;
+    }
+    .come-for-learn-text span {
+        margin-right: 11px;
+    }
+    .direction-rtl .come-for-learn-text span {
+        margin-left: 11px;
+    }
+
+    /*Courses page*/
+    .filter-bar-search-box {
+        width: 210px;
+    }
+    .filter-bar-search-box input {
+        width: 79%;
+    }
+    .show-all-course-area-inner-tags {
+        margin-right: 5px;
+        font-size: 12px;
+    }
+    .direction-rtl .show-all-course-area-inner-tags {
+        margin-left: 5px;
+    }
+
+    /*Course single*/
+    .review-progress-bar-wrap {
+        display: none;
+    }
+    .review-tab-count-box {
+        margin-bottom: 0;
+    }
+
+    /*Course Upload*/
+    #upload-course-overview-2 .main-upload-video-processing-img-wrap {
+        height: 238px;
+    }
+    .stepper-action-btns button,
+    .stepper-action-btns .theme-button1,
+    .action-button.theme-button1 {
+        padding: 9.5px 9px !important;
+        font-size: 14px !important;
+    }
+    .stepper-action-btns .theme-button3,
+    .show-last-phase-back-btn {
+        margin-right: 5px;
+    }
+    .direction-rtl .stepper-action-btns .theme-button3,
+    .direction-rtl .show-last-phase-back-btn {
+        margin-left: 5px;
+    }
+    /*Course Upload*/
+
+    /* Course Watch Page */
+    .course-watch-assignment-content .theme-btn {
+        padding: 9.5px 12px !important;
+    }
+    /* Course Watch Page */
+
+    /* All Video Player */
+    .vimeoPlayer .xdPlayer {
+        height: 166px;
+        margin-bottom: 30px;
+    }
+    /* All Video Player */
+}
+
+@media only screen and (max-width: 399px) {
+    /* Forum details page */
+    .forum-category-single-item-bottom-right {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+    .forum-details-item .forum-category-single-item-bottom-right li,
+    .forum-details-item .forum-category-single-item-bottom-left li {
+        font-size: 13px;
+    }
+    .forum-details-item .forum-category-single-item-bottom-left {
+        margin-bottom: 7px;
+    }
+    .forum-details-item .forum-category-single-item-bottom-right li {
+        margin-right: 10px;
+        margin-top: 8px;
+    }
+    .direction-rtl
+        .forum-details-item
+        .forum-category-single-item-bottom-right
+        li {
+        margin-right: 0;
+    }
+    /* Forum details page */
+}
+
+@media only screen and (max-width: 380px) {
+    .come-for-learn-text {
+        width: 86%;
+    }
+    /* Ticket Details page */
+    .ticket-details-box-title {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+    .ticket-info-right-status {
+        margin-top: 10px;
+    }
+    /* Ticket Details page */
+}
+@media only screen and (max-width: 360px) {
+    .come-for-learn-text {
+        width: 93%;
+    }
+    .is-that-helpful-btns .theme-btn {
+        margin: 0 5px 10px;
+    }
+
+    /* Instructor Discussion Page */
+    .instructor-discussion-course-item .user-img-wrap {
+        width: 40px;
+        height: 30px;
+    }
+    .instructor-discussion-course-item .user-img-wrap img {
+        max-width: 40px;
+        max-height: 30px;
+        min-width: 40px;
+        min-height: 30px;
+    }
+    .instructor-discussion-course-item h6 {
+        font-size: 14px;
+    }
+    .instructor-discussion-course-item p {
+        font-size: 12px;
+    }
+    .instructor-discussion-course-item.message-user-item {
+        padding: 12px 6px;
+    }
+    .instructor-discussion-course-item .message-user-notification-box {
+        min-height: 7px;
+        min-width: 7px;
+        padding: 0;
+    }
+    /* Instructor Discussion Page */
+
+    /* Consultation booking */
+    #consultationBookingModal .consultantion-hours-box {
+        min-width: 286px !important;
+    }
+    #consultationBookingModal .consultantion-hours-box label {
+        margin-right: 30px;
+    }
+    /* Consultation booking */
+}
+
+@media only screen and (max-width: 330px) {
+    .hero-heading {
+        font-size: 33px;
+    }
+    .come-for-learn-text {
+        width: 100%;
+    }
+    .pagination .page-link {
+        height: 30px;
+        width: 30px;
+    }
+}
+/*-------------------------------------------
+    24. Responsive Design End
+-------------------------------------------*/

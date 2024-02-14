@@ -1,0 +1,1031 @@
+.upcoming-section-area {
+    padding-bottom: 130px;
+    padding-top: 130px;
+}
+
+/*-------------------------
+ landing-banner area start
+------------------------ */
+
+.landing-banner-img-1 {
+    position: absolute;
+    top: 70px;
+    left: 24px;
+    border-radius: 50%;
+    max-width: 191px;
+    max-height: 191px;
+    height: 191px;
+    width: 191px;
+    object-fit: cover;
+    -o-object-fit: cover;
+    z-index: -1;
+}
+
+.landing-banner-img-2 {
+    position: absolute;
+    top: 70px;
+    right: 24px;
+    border-radius: 50%;
+    max-width: 191px;
+    max-height: 191px;
+    height: 191px;
+    width: 191px;
+    object-fit: cover;
+    -o-object-fit: cover;
+    z-index: -1;
+}
+
+.landing-banner-img-3 {
+    position: absolute;
+    left: 209px;
+    border-radius: 50%;
+    object-fit: cover;
+    -o-object-fit: cover;
+    max-width: 107px;
+    max-height: 107px;
+    width: 107px;
+    height: 107px;
+    bottom: 0;
+    z-index: -1;
+}
+
+.landing-banner-img-4 {
+    position: absolute;
+    right: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    -o-object-fit: cover;
+    max-width: 132px;
+    max-height: 132px;
+    width: 132px;
+    height: 132px;
+    bottom: 0;
+    z-index: -1;
+}
+
+.landing-banner-ellipse-4 {
+    position: absolute;
+    left: 378px;
+    bottom: 0;
+    z-index: -1;
+}
+
+.landing-banner-ellipse-5 {
+    position: absolute;
+    right: 306px;
+    bottom: 0;
+    z-index: -1;
+}
+
+/*-------------------------
+ landing-banner area end
+------------------------ */
+
+/*--------------------- 
+Will Get area start
+ -----------------------*/
+
+.landing-overlay {
+    padding: 200px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.section-title-part {
+    margin-bottom: 58px;
+}
+
+.single-get-item .feature-content > h6 {
+    color: var(--white-color);
+    margin-bottom: 12px;
+}
+
+.single-get-item .feature-content > p {
+    color: var(--text-neutral-color);
+}
+
+.landing-overlay:before {
+    width: 146%;
+    height: 100%;
+    left: -23%;
+    top: -86%;
+    content: "";
+    z-index: 2;
+    position: absolute;
+    border-radius: 50%;
+    background-color: var(--page-bg);
+}
+
+.landing-overlay:after {
+    width: 146%;
+    height: 100%;
+    left: -23%;
+    bottom: -86%;
+    content: "";
+    z-index: 2;
+    position: absolute;
+    border-radius: 50%;
+    background-color: var(--page-bg);
+}
+
+/*--------------------- 
+Will Get area end
+ -----------------------*/
+
+/* --------------------
+  Broad Selection start
+ --------------------------*/
+
+.courses-area-section {
+    padding-top: 96px;
+}
+
+.mb-la-24 {
+    margin-bottom: 24px !important;
+}
+
+.selection-course-slider .owl-nav {
+    position: absolute;
+    right: -11px;
+    bottom: -50px;
+    background: var(--page-bg);
+}
+
+.selection-course-slider {
+    margin-bottom: 24px;
+}
+
+.selection-course-slider .owl-nav button {
+    width: 50px;
+    height: 50px;
+    background: var(--white-color) !important;
+    border: 1px solid var(--border-color2) !important;
+    border-radius: 50%;
+    margin: 0 4px;
+}
+
+.selection-course-slider .owl-nav button:hover {
+    background: var(--theme-color) !important;
+}
+
+.selection-course-slider .owl-nav button:hover svg path {
+    fill: var(--white-color) !important;
+}
+
+/* --------------------
+  Broad Selection end
+ --------------------------*/
+
+/* -----------------------
+ course category area start 
+ ------------------------*/
+
+.min-course-h {
+    min-height: 248px !important;
+}
+
+.category-title-part {
+    margin: 154px 0px 130px 0px;
+}
+
+.mb-category-50 {
+    margin-bottom: 50px;
+}
+
+/* -----------------------
+ course category area end 
+ ------------------------*/
+
+/*----------------------
+ Extensive area start
+------------------------- */
+
+.gradient-bg-lan {
+    background: var(--gradient-banner-bg);
+    background-blend-mode: overlay, normal, overlay, color-burn, screen, overlay,
+        difference, difference, normal;
+    border-radius: 10px;
+}
+
+.extensive-banner-area {
+    background: var(--gradient-overlay-bg);
+    text-align: center;
+    /* height: 455px; */
+    border-radius: 10px;
+    padding: 77px 0 160px;
+}
+
+.extensive-banner-area p {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 154%;
+    color: var(--text-neutral-color);
+    margin-bottom: 20px;
+}
+
+.extensive-banner-area img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.exten-slider-area {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    bottom: -220px;
+    padding-bottom: 55px;
+}
+
+.extensive-area {
+    margin-bottom: 219px;
+}
+
+.exten-slider-area .owl-nav {
+    position: absolute;
+    left: 50%;
+    bottom: -78px;
+    background: var(--page-bg);
+    margin-left: -56px;
+}
+
+.exten-slider-area .owl-nav button {
+    width: 50px;
+    height: 50px;
+    background: var(--white-color) !important;
+    border: 1px solid var(--border-color2) !important;
+    border-radius: 50%;
+    margin: 0 4px;
+}
+
+.exten-slider-area .owl-nav button:hover {
+    background: var(--theme-color) !important;
+}
+
+.exten-slider-area .owl-nav button:hover svg path {
+    fill: var(--white-color) !important;
+}
+
+.single-exten-img img {
+    max-width: 150px;
+    max-height: 175px;
+    min-height: 175px;
+    object-fit: cover;
+    -o-object-fit: cover;
+    margin: auto;
+}
+/*----------------------
+ Extensive area end
+------------------------- */
+
+/* ---------------------------------
+ Latest Bundle Courses area start 
+ ----------------------------------*/
+.latest-courses-area {
+    padding-bottom: 154px;
+    padding-top: 154px;
+}
+.sf-pt-188 {
+    padding-top: 188px !important;
+}
+
+/* ---------------------------------
+Latest Bundle Courses area end 
+----------------------------------*/
+
+/* -------------------------------------
+Personalized section area start
+-----------------------------------------*/
+
+.trainer-name {
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 106.5%;
+    margin-bottom: 11px;
+    color: var(--white-color);
+}
+.trainer-name a {
+    color: var(--white-color);
+}
+
+.trainer-position {
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 106.5%;
+    margin-bottom: 16px;
+    color: var(--white-color);
+}
+
+.trainer-base img {
+    width: 30px;
+    height: 30px;
+    margin-right: 3px;
+}
+
+.trainer-base {
+    margin-bottom: 17px;
+}
+
+.hover-trainer-info {
+    padding: 30px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    opacity: 0;
+    transition: all 0.3s;
+}
+.training-card {
+    min-height: 428px;
+    max-height: 428px;
+}
+.trainer-img {
+    height: 428px;
+    width: 100%;
+}
+
+.training-card:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background: var(--gradient-training-bg);
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.training-card:hover:after {
+    opacity: 1;
+}
+
+.training-card:hover .hover-trainer-info {
+    opacity: 1;
+}
+
+/* -------------------------------------
+Personalized section area end
+-----------------------------------------*/
+
+/* -------------------------------------
+price section area end
+-----------------------------------------*/
+
+.table-width {
+    min-width: 936px;
+    width: 100%;
+}
+
+.price-title-bg:hover {
+    background: none;
+}
+
+.price-box-title {
+    text-align: center;
+    padding: 48px 0;
+}
+
+.price-box-title img {
+    max-width: 80px;
+    max-height: 80px;
+    margin-bottom: 4px;
+}
+
+.price-labe {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 106.5%;
+}
+
+.price-body-info tr:hover {
+    background: none;
+}
+
+.price-title-body td {
+    padding: 40px 0;
+}
+
+.title-price-list {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+}
+
+.price-sub-title {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 106.5%;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.price-currency {
+    color: #9e9eac;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 106.5%;
+}
+
+.price-body-list th,
+.price-body-list td {
+    padding: 31px 0;
+    border-top: none;
+    border-bottom: none;
+    text-align: left;
+    padding-left: 75px;
+}
+
+.price-body-list td {
+    border-width: 1px;
+    text-align: center;
+    padding-left: 0;
+}
+
+.price-title-body th > p {
+    text-align: left;
+    padding-left: 75px;
+}
+
+.price-body-info .price-body-list:nth-child(2) th,
+.price-body-info .price-body-list:nth-child(2) td {
+    padding-top: 58px;
+}
+
+.price-body-info .price-body-list:nth-last-child(2) th,
+.price-body-info .price-body-list:nth-last-child(2) td {
+    padding-bottom: 54px;
+}
+
+.price-btu-line td {
+    padding: 54px 0;
+    border-top: 1px solid var(--border-color);
+}
+
+.price-title-bg th {
+    border-width: 1px;
+}
+
+.price-title-body td {
+    border-width: 1px;
+    width: 180px;
+}
+
+.price-btu-line td {
+    border-width: 1px;
+}
+
+.our-plan {
+    position: absolute;
+    top: 88px;
+    left: -24px;
+    background: var(--theme-color);
+    color: var(--white-color);
+    padding: 10px 20px;
+    font-size: 41px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+    max-width: 364px;
+}
+@media screen and (max-width: 1023px) {
+    .our-plan {
+        left: 0;
+    }
+}
+@media screen and (max-width: 1023px) {
+    .our-plan::after {
+        display: none;
+    }
+}
+
+.our-plan:after {
+    position: absolute;
+    top: -18px;
+    left: 0;
+    width: 24px;
+    height: 18px;
+    background: #3e20ac;
+    content: "";
+    -webkit-clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+}
+
+/* -------------------------------------
+price section area end
+-----------------------------------------*/
+
+/* -------------------------------------
+instructors section area START
+-----------------------------------------*/
+
+.instructors-area {
+    position: relative;
+    overflow: hidden;
+    padding: 250px 0;
+}
+
+.instructors-area:after {
+    position: absolute;
+    width: 233%;
+    height: 100%;
+    left: -67%;
+    top: -95%;
+    background-color: var(--page-bg);
+    content: "";
+    border-radius: 100%;
+}
+
+.instructors-area:before {
+    position: absolute;
+    width: 233%;
+    height: 100%;
+    left: -67%;
+    bottom: -95%;
+    background-color: var(--page-bg);
+    content: "";
+    border-radius: 100%;
+}
+
+/* -------------------------------------
+instructors section area END
+-----------------------------------------*/
+
+/* -------------------------------------
+Customers  section area start
+-----------------------------------------*/
+
+.rectangle-img {
+    height: 100%;
+    width: 224px;
+}
+
+.customers-landing:before {
+    width: 213%;
+    height: 100%;
+    left: -56%;
+    top: -94%;
+    content: "";
+    z-index: 2;
+    position: absolute;
+    border-radius: 50%;
+    background-color: var(--page-bg);
+}
+
+.customers-landing:after {
+    width: 213%;
+    height: 100%;
+    left: -56%;
+    bottom: -94%;
+    content: "";
+    z-index: 2;
+    position: absolute;
+    border-radius: 50%;
+    background-color: var(--page-bg);
+}
+
+.customers-landing {
+    padding: 200px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.sf-max-h-572 {
+    max-height: 572px;
+}
+
+/* -------------------------------------
+Customers  section area end
+-----------------------------------------*/
+
+/* -------------------------------------
+footer  section area star
+-----------------------------------------*/
+
+.landing-footer .section-overlay:after {
+    position: absolute;
+    top: -27%;
+    transform: translateX(-50%);
+    left: 50%;
+    width: 110%;
+    height: 39%;
+    content: "";
+    background-color: var(--page-bg);
+    border-radius: 50%;
+}
+@media screen and (max-width: 991px) {
+    .landing-footer .section-overlay:after {
+        top: -30%;
+        width: 120%;
+    }
+}
+@media screen and (max-width: 767px) {
+    .landing-footer .section-overlay:after {
+        top: -32%;
+        width: 130%;
+        display: none;
+    }
+}
+@media screen and (max-width: 575px) {
+    .landing-footer .section-overlay:after {
+        top: -35%;
+        width: 170%;
+    }
+}
+.landing-footer .section-overlay {
+    padding-top: 100px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* -------------------------------------
+footer  section area end
+-----------------------------------------*/
+
+/* -------------------------------------
+responsive css add section area start
+-----------------------------------------*/
+
+@media (min-width: 1200px) and (max-width: 1400.98px) {
+    .single-exten-img {
+        padding: 0;
+        background: none;
+    }
+}
+
+@media (min-width: 10px) and (max-width: 1199.98px) {
+    .exten-slider-area {
+        bottom: -390px;
+    }
+
+    .extensive-area {
+        margin-bottom: 311px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1400.98px) {
+    .landing-banner-ellipse-6 {
+        right: 0;
+    }
+
+    .landing-banner-img-4 {
+        right: 74px;
+    }
+
+    .landing-banner-img-3 {
+        left: 100px;
+    }
+
+    .landing-banner-title {
+        font-size: 67px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1023.98px) {
+    .single-exten-img {
+        padding: 0;
+        background: none;
+    }
+    .landing-banner-title {
+        font-size: 50px;
+    }
+
+    .landing-banner-ellipse-6 {
+        right: 0;
+    }
+
+    .landing-banner-img-2 {
+        right: 0px;
+    }
+
+    .landing-banner-img-1 {
+        left: 0px;
+    }
+
+    .landing-banner-img-3 {
+        left: 10px;
+    }
+
+    .landing-banner-img-4 {
+        right: -14px;
+    }
+
+    .price-table {
+        min-width: 936px;
+        width: 100%;
+    }
+
+    .overflow-x-scroll {
+        overflow-x: scroll;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .landing-overlay {
+        padding: 100px 0;
+    }
+
+    .landing-overlay:before {
+        width: 167%;
+        left: -34%;
+        top: -90%;
+    }
+
+    .landing-overlay:after {
+        width: 167%;
+        left: -34%;
+        bottom: -90%;
+    }
+
+    .landing-banner-title {
+        font-size: 40px;
+    }
+
+    .landing-banner-ellipse-6 {
+        right: 0;
+    }
+
+    .landing-banner-img-3 {
+        left: 0;
+    }
+    .landing-banner-img-4 {
+        right: 0;
+    }
+
+    /* instructors css */
+
+    .instructors-area {
+        padding: 100px 0;
+    }
+
+    .instructors-area:before {
+        width: 298%;
+        left: -100%;
+        bottom: -97%;
+    }
+
+    .instructors-area:after {
+        width: 298%;
+        left: -100%;
+        top: -97%;
+    }
+
+    /* customers css */
+
+    .customers-landing {
+        padding: 100px 0;
+    }
+
+    .customers-landing:before {
+        width: 294%;
+        left: -97%;
+        top: -97%;
+    }
+
+    .customers-landing:after {
+        width: 294%;
+        left: -97%;
+        bottom: -97%;
+    }
+
+    /* price css */
+    .overflow-x-scroll {
+        overflow-x: scroll;
+    }
+
+    .price-table {
+        min-width: 936px;
+        width: 100%;
+    }
+
+    /* footer css */
+
+    .landing-footer .section-overlay {
+        padding-top: 100px;
+    }
+
+    /* .landing-footer .section-overlay:after {
+        top: -22%;
+        left: -3%;
+        width: 106%;
+        height: 33%;
+    } */
+}
+
+@media (min-width: 78px) and (max-width: 767.98px) {
+    .landing-overlay {
+        padding: 100px 0;
+    }
+
+    .landing-overlay:after {
+        width: 250%;
+        left: -74%;
+        bottom: -95.5%;
+        display: none;
+    }
+
+    .landing-overlay:before {
+        width: 250%;
+        left: -74%;
+        top: -95.5%;
+        display: none;
+    }
+
+    .landing-hero-area img {
+        display: none;
+    }
+    .overflow-x-scroll {
+        overflow-x: scroll;
+    }
+
+    .landing-banner-title {
+        font-size: 40px;
+    }
+
+    .landing-banner-text {
+        margin-top: 50px;
+    }
+
+    .landing-hero-area .landing-come-area {
+        width: 100%;
+    }
+
+    .category-tab-area ul li button {
+        margin-bottom: 10px;
+    }
+
+    .course-landing-card {
+        align-items: unset !important;
+        min-height: unset !important;
+        flex-direction: column !important;
+    }
+
+    .course-landing-card img {
+        width: 100% !important;
+    }
+
+    .course-landing-card > div {
+        width: 100%;
+        display: block;
+    }
+
+    .price-table {
+        min-width: 936px;
+        width: 100%;
+    }
+
+    /* category css */
+
+    .category-title-part {
+        margin: 85px 0;
+    }
+
+    /* latest css */
+    .latest-courses-area {
+        padding-bottom: 80px;
+    }
+
+    /* upcoming css */
+    .upcoming-section-area {
+        padding-bottom: 80px;
+        padding-top: 70px;
+    }
+
+    .instructors-area:before {
+        width: 349%;
+        left: -124%;
+        bottom: -98%;
+        display: none;
+    }
+
+    .instructors-area:after {
+        width: 349%;
+        left: -124%;
+        top: -98%;
+        display: none;
+    }
+
+    /* customers css */
+
+    .customers-landing {
+        padding: 100px 0;
+    }
+
+    .customers-landing:before {
+        width: 354%;
+        left: -127%;
+        top: -98%;
+        display: none;
+    }
+
+    .customers-landing:after {
+        width: 354%;
+        left: -127%;
+        bottom: -98%;
+        display: none;
+    }
+
+    /* footer css */
+
+    .landing-footer .section-overlay {
+        padding-top: 80px;
+    }
+    .sf-landing-footer .section-overlay {
+        padding-top: 0;
+    }
+
+    /* .landing-footer .section-overlay:after {
+        top: -33%;
+        left: -17%;
+        width: 133%;
+        height: 40%;
+    } */
+}
+
+@media (min-width: 78px) and (max-width: 575.98px) {
+    .customers-d-column {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 78px) and (max-width: 377.98px) {
+    .price-table {
+        min-width: 936px;
+        width: 100%;
+    }
+}
+
+/* -------------------------------------
+responsive css add section area end
+-----------------------------------------*/
+
+[data-background] {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.sf-section-landing-hero {
+    position: relative;
+}
+@media screen and (min-width: 1200px) {
+    .sf-section-landing-hero {
+        padding-top: 170px !important;
+    }
+}
+@media screen and (min-width: 992px) {
+    .sf-section-landing-hero {
+        padding-top: 150px !important;
+    }
+}
+.sf-section-landing-hero .container {
+    max-width: 1550px;
+}
+.sf-landing-hero-area {
+    padding: 128px 0 46px;
+}
+@media screen and (max-width: 1199px) {
+    .sf-landing-hero-area {
+        padding: 46px 0;
+    }
+    .sf-landing-hero-area[data-background] {
+        background-size: contain;
+    }
+}
+@media screen and (max-width: 991px) {
+    .sf-landing-hero-area[data-background] {
+        background-image: none !important;
+    }
+}
+/* .sf-section-landing-hero::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1419px;
+    height: 1005px;
+    max-height: 465px;
+    background-image: url(../img/landing1/sf-banner-bg-1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+} */
+@media screen and (max-width: 767px) {
+    .sf-section-landing-hero .landing-banner-text {
+        padding-top: 0;
+    }
+    /* .sf-section-landing-hero::before {
+        display: none;
+    } */
+}

@@ -1,0 +1,1120 @@
+/*-------------------------
+ landing-banner area start
+------------------------ */
+
+.landing-2-banner-1 {
+    position: absolute;
+    left: -60px;
+    bottom: 0;
+    width: 344px;
+    height: 478px;
+    object-fit: cover;
+    max-width: 344px;
+    max-height: 478px;
+    z-index: -1;
+}
+
+.landing-2-banner-2 {
+    position: absolute;
+    right: -59px;
+    bottom: 0;
+    width: 344px;
+    height: 478px;
+    object-fit: cover;
+    max-width: 344px;
+    max-height: 478px;
+    z-index: -1;
+}
+
+.landing-feature {
+    position: absolute;
+    padding: 25px 16px;
+    background: var(--white-color);
+    border-radius: 2.112px;
+    max-width: 338px;
+    z-index: 2;
+}
+
+.landing-feature img {
+    max-width: 50px;
+    max-height: 50px;
+    object-fit: cover;
+}
+
+.feature-1 {
+    left: 9%;
+    bottom: 54px;
+}
+
+.feature-2 {
+    right: 11%;
+    bottom: 72px;
+}
+
+.landing-banner-ellipse-4 {
+    position: absolute;
+    left: 414px;
+    bottom: 67px;
+    z-index: -1;
+}
+
+.landing-banner-ellipse-5 {
+    position: absolute;
+    right: 425px;
+    bottom: 84px;
+    z-index: -1;
+}
+/*-------------------------
+ landing-banner area end
+------------------------ */
+
+/*-------------------------
+instructor and support area star
+------------------------ */
+
+.instructor-support {
+    padding-top: 110px;
+    padding-bottom: 321px;
+}
+
+.instructor-support-area {
+    max-width: 1660px;
+    margin: auto;
+}
+
+.instructor-support .section-sub-heading {
+    color: var(--text-neutral-color);
+}
+
+.support-instructor-box {
+    position: absolute;
+    width: 100%;
+    bottom: -174px;
+    left: 0;
+}
+
+/*-------------------------
+instructor and support area end
+------------------------ */
+
+/* ---------------------------------
+ Latest Bundle Courses area start 
+ ----------------------------------*/
+
+.latest-courses-landing-2 {
+    margin-top: 175px;
+    padding: 118px 0;
+}
+
+/* ---------------------------------
+ Latest Bundle Courses area end 
+ ----------------------------------*/
+
+/* ---------------------------------
+ CategoryCourses area start 
+ ----------------------------------*/
+
+.course-category-area {
+    padding: 120px 0;
+}
+
+.landing-2-tab {
+    min-height: 273px;
+}
+
+.common-product .course-item-upcoming {
+    min-height: unset !important;
+    width: 637px;
+}
+
+.common-product {
+    width: 637px;
+    position: absolute;
+    right: 15px;
+    top: 0;
+}
+
+.landing-tab-2 {
+    min-height: 284px;
+}
+
+.tab-slider-landing {
+    margin-top: 48px;
+    margin-bottom: 28px;
+}
+
+.tab-slider-landing .owl-nav {
+    position: absolute;
+    right: -11px;
+    bottom: -50px;
+    background: var(--angel-elsie);
+}
+
+.tab-slider-landing .owl-nav button {
+    width: 50px;
+    height: 50px;
+    background: var(--white-color) !important;
+    border: 1px solid var(--border-color2) !important;
+    border-radius: 50%;
+    margin: 0 4px;
+}
+
+.tab-slider-landing .owl-nav button:hover {
+    background: var(--theme-color) !important;
+}
+
+.tab-slider-landing .owl-nav button:hover svg path {
+    fill: var(--white-color) !important;
+}
+
+/* ---------------------------------
+ CategoryCourses area end 
+ ----------------------------------*/
+
+/* ---------------------------------
+ Extensive Product are  start 
+ ----------------------------------*/
+
+.extensive-area-2 {
+    padding: 120px 0;
+}
+
+.extensive-banner-area img {
+    margin-bottom: 21px;
+}
+
+.extensive-banner-area p {
+    margin-bottom: 24px;
+}
+
+.extensive-single-product {
+    background: var(--white-color);
+    padding: 40px 60px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    gap: 48px;
+}
+
+.extensive-single-product img {
+    max-width: 398px;
+    height: 398px;
+    object-fit: contain;
+}
+
+.extensive-product-all .owl-nav button {
+    width: 50px;
+    height: 50px;
+    background: var(--white-color) !important;
+    border: 1px solid var(--border-color2) !important;
+    border-radius: 50%;
+}
+
+.extensive-product-all .owl-nav button:hover {
+    background: var(--theme-color) !important;
+}
+
+.extensive-product-all .owl-nav button:hover svg path {
+    fill: var(--white-color) !important;
+}
+
+.extensive-product-all .owl-nav .owl-next {
+    float: right;
+    margin-right: -90px;
+}
+
+.extensive-product-all .owl-nav .owl-prev {
+    margin-left: -90px;
+}
+
+.extensive-product-all .owl-nav {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    margin-top: -25px;
+}
+
+/* ---------------------------------
+ Extensive Product are  end 
+ ----------------------------------*/
+
+/* ---------------------------------
+ bundle-courses-area Bundle Courses area start
+ ----------------------------------*/
+
+.bundle-pt {
+    padding-top: 140px;
+}
+
+.single-bundle-slider {
+    display: inherit;
+    margin-bottom: 24px;
+    height: auto !important;
+}
+
+.bundle-slider {
+    height: 690px;
+}
+
+.single-bundle-img img {
+    height: 217px;
+    object-fit: cover;
+    margin: auto;
+    display: block;
+}
+
+.bundle-1 {
+    margin-top: -24px;
+}
+
+.single-bundle-img {
+    padding: 16px 16px 0;
+}
+
+.slider-btu {
+    position: absolute;
+    z-index: 108;
+    left: 68px;
+    bottom: 218px;
+}
+
+.bundle-all-slider {
+    position: unset;
+}
+
+.bundle-next:after,
+.bundle-prev:after {
+    font-size: 16px;
+    color: var(--theme-color);
+    font-weight: 700;
+    transform: rotate(-90deg);
+}
+
+.bundle-prev,
+.bundle-next {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--white-color) !important;
+    border: 1px solid var(--border-color2) !important;
+}
+
+.bundle-prev:hover,
+.bundle-next:hover {
+    background: var(--theme-color) !important;
+}
+
+.bundle-prev:hover:after,
+.bundle-next:hover:after {
+    color: var(--white-color);
+}
+
+/* ---------------------------------
+bundle-courses-area Bundle Courses area end
+ ----------------------------------*/
+
+/* ---------------------------------
+  Upcoming Course Section start 
+ ----------------------------------*/
+
+.upcoming-section-area {
+    padding: 120px 0 140px;
+}
+
+.upcoming-all-slider {
+    margin-top: 48px;
+    margin-bottom: 28px;
+}
+
+.upcoming-all-slider .owl-nav {
+    position: absolute;
+    right: -11px;
+    bottom: -50px;
+    background: var(--page-bg);
+}
+
+.upcoming-all-slider .owl-nav button {
+    width: 50px;
+    height: 50px;
+    background: var(--white-color) !important;
+    border: 1px solid var(--border-color2) !important;
+    border-radius: 50%;
+    margin: 0 4px;
+}
+
+.upcoming-all-slider .owl-nav button:hover {
+    background: var(--theme-color) !important;
+}
+
+.upcoming-all-slider .owl-nav button:hover svg path {
+    fill: var(--white-color) !important;
+}
+
+/* ---------------------------------
+  Upcoming Course Section end
+ ----------------------------------*/
+
+/* ---------------------------------
+  Personalized Training start
+ ----------------------------------*/
+
+.training-overlay {
+    /* padding-left: 307px; */
+    padding-top: 91px;
+    padding-right: 111px;
+}
+.training-overlay .section-title {
+    max-width: 377px;
+}
+@media screen and (min-width: 1450px) {
+    .training-overlay .section-title {
+        margin-left: auto;
+    }
+}
+@media screen and (max-width: 991px) {
+    .training-overlay .section-title {
+        max-width: 100%;
+    }
+}
+@media screen and (max-width: 767px) {
+    .training-overlay .section-title {
+        max-width: 332px;
+        text-align: center;
+        margin: 0 auto;
+    }
+}
+
+.training-overlay p {
+    color: var(--text-neutral-color);
+}
+
+.training-slider-all .owl-nav {
+    position: absolute;
+    left: -44%;
+    bottom: 133px;
+}
+@media screen and (max-width: 1800px) {
+    .training-slider-all .owl-nav {
+        left: -46%;
+    }
+}
+@media screen and (max-width: 1750px) {
+    .training-slider-all .owl-nav {
+        left: -48%;
+    }
+}
+@media screen and (max-width: 1700px) {
+    .training-slider-all .owl-nav {
+        left: -49%;
+    }
+}
+@media screen and (max-width: 1650px) {
+    .training-slider-all .owl-nav {
+        left: -51%;
+    }
+}
+@media screen and (max-width: 1600px) {
+    .training-slider-all .owl-nav {
+        left: -53%;
+    }
+}
+@media screen and (max-width: 1500px) {
+    .training-slider-all .owl-nav {
+        left: -56%;
+    }
+}
+@media screen and (max-width: 1450px) {
+    .training-slider-all .owl-nav {
+        left: -58%;
+    }
+}
+@media screen and (max-width: 1400px) {
+    .training-slider-all .owl-nav {
+        left: -43%;
+    }
+}
+@media screen and (max-width: 1350px) {
+    .training-slider-all .owl-nav {
+        left: -43%;
+    }
+}
+@media screen and (max-width: 1300px) {
+    .training-slider-all .owl-nav {
+        left: -43%;
+    }
+}
+
+.training-slider-all .owl-nav button {
+    width: 50px;
+    height: 50px;
+    background: var(--white-color) !important;
+    border: 1px solid var(--border-color2) !important;
+    border-radius: 50%;
+    margin: 0 4px;
+}
+
+.training-slider-all .owl-nav button:hover {
+    background: var(--theme-color) !important;
+}
+
+.training-slider-all .owl-nav button:hover svg path {
+    fill: var(--white-color) !important;
+}
+
+.training-slider-all {
+    padding: 110px 0;
+}
+
+/* ---------------------------------
+  Personalized Training end
+ ----------------------------------*/
+
+/* -----------------------
+ price category area start 
+ ------------------------*/
+
+.price-area-landing {
+    padding-top: 120px;
+    padding-bottom: 110px;
+}
+
+.price-list-content {
+    background: var(--white-color);
+    padding: 21px 41px;
+    border-radius: 4px;
+}
+
+.price-list-content ul li svg {
+    background: var(--color-green);
+    border-radius: 50%;
+    padding: 2px;
+}
+
+.price-list-content ul li svg path {
+    fill: var(--white-color);
+}
+
+.price-list-content ul li {
+    border-bottom: 1px solid var(--border-color2);
+    padding: 25px 0;
+}
+
+@media screen and (max-width: 991px) {
+    .sf-sass-plan {
+        display: flex;
+        gap: 10px;
+        overflow-x: auto;
+    }
+}
+
+.landing-tab-price {
+    display: flex;
+    padding: 25px 24px;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.landing-tab-price .price-label {
+    flex: 1 1 50%;
+    text-align: right;
+}
+@media screen and (max-width: 991px) {
+    .landing-tab-price {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+.price-landing-page-tab .nav-link.active {
+    background: var(--theme-color);
+}
+.price-landing-page-tab .nav-link {
+    background: var(--text-neutral-color);
+}
+
+.price-landing-page-tab .nav-link.active .landing-tab-price h4 {
+    color: var(--white-color);
+}
+
+.price-landing-page-tab .nav-link.active .landing-tab-price h6 {
+    color: var(--white-color);
+}
+
+.price-landing-page-tab .nav-link.active .landing-tab-price p {
+    color: var(--text-neutral-color);
+    margin-top: 6px;
+}
+
+.price-landing-page-tab .nav-link .landing-tab-price p {
+    color: #9e9eac;
+    margin-top: 6px;
+}
+
+.price-landing-page-tab .nav-link.active .landing-tab-price p {
+    color: var(--text-neutral-color);
+}
+
+.price-landing-page-tab .nav-link .landing-tab-price h4 {
+    font-size: 22px;
+}
+
+.price-landing-page-tab .nav-link .landing-tab-price h6 {
+    font-size: 32px;
+}
+
+.landing-tab-price:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    height: 50%;
+    width: 1px;
+    transform: translate(-50%, -50%);
+}
+@media screen and (max-width: 991px) {
+    .landing-tab-price:after {
+        display: none;
+    }
+}
+
+.nav-link.active .landing-tab-price:after {
+    background: var(--white-color);
+}
+.nav-link .landing-tab-price:after {
+    background: var(--border-color2);
+}
+
+.price-label-logo {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex: 1 1 50%;
+}
+
+.price-landing-page-tab ul li {
+    margin-bottom: 18px;
+}
+
+/* -----------------------
+ price category area end 
+ ------------------------*/
+
+/* -----------------------
+  Customers  Valuable area start 
+  ------------------------*/
+
+.customers-says-landing {
+    padding-top: 120px;
+    padding-bottom: 110px;
+}
+
+.rectangle-2-img {
+    width: 224px;
+    height: 224px;
+    margin-bottom: 17px;
+}
+
+.landing-2 h6 {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 106.5%;
+    color: var(--white-color);
+}
+
+.testimonial-landing-2 {
+    padding: 48px 28px 45px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.wh-30 {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+/* -----------------------
+  Customers  Valuable area end 
+  ------------------------*/
+
+/* --------------------------
+  responsive css area start
+ -------------------------------- */
+
+@media (max-width: 1441.98px) {
+    .training-overlay {
+        padding-left: 14%;
+        padding-right: 87px;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+    /* banner css */
+    .feature-1 {
+        left: 0;
+    }
+
+    .feature-2 {
+        right: 0;
+    }
+
+    /* instructor css */
+    .instructor-support {
+        padding-bottom: 246px;
+    }
+
+    /* Category */
+    .common-product {
+        top: 26px;
+    }
+
+    /* price css */
+
+    .price-label-logo {
+        gap: 9px;
+        flex-direction: column;
+    }
+
+    .price-landing-page-tab .nav-link .landing-tab-price h6 {
+        font-size: 27px;
+    }
+
+    .price-label-logo img {
+        width: 48px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    /* banner css */
+
+    .landing-2-banner-1 {
+        left: -18px;
+        width: 269px;
+        height: 390px;
+        max-width: 269px;
+        max-height: 390px;
+    }
+
+    .landing-2-banner-2 {
+        right: -29px;
+        width: 274px;
+        height: 380px;
+        max-width: 274px;
+        max-height: 380px;
+    }
+
+    .landing-banner-ellipse-6 {
+        display: none;
+    }
+
+    .feature-1 {
+        left: -16px;
+    }
+
+    .landing-feature {
+        padding: 18px 16px;
+        max-width: 293px;
+    }
+
+    .feature-2 {
+        right: -13px;
+        bottom: 40px;
+    }
+
+    /* instructor css */
+
+    .instructor-support {
+        padding-bottom: 180px;
+    }
+
+    /* Category */
+
+    .common-product {
+        display: none;
+    }
+
+    /* extensive css */
+
+    .extensive-single-product img {
+        max-width: 250px;
+    }
+
+    /* price css */
+
+    .price-label-logo {
+        gap: 10px;
+        flex-direction: column;
+    }
+
+    .price-label-logo img {
+        width: 48px;
+    }
+
+    .price-landing-page-tab .nav-link .landing-tab-price h6 {
+        font-size: 27px;
+    }
+
+    .landing-tab-price:after {
+        left: 40%;
+    }
+
+    /* customers css */
+
+    .customers-says-landing {
+        padding-top: 80px;
+        padding-bottom: 100px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    /* banner css */
+    .landing-hero-area {
+        padding-bottom: 35px;
+    }
+
+    .feature-1 {
+        left: 0;
+        bottom: 0;
+    }
+
+    .landing-feature {
+        padding: 16px 16px;
+        max-width: 330px;
+    }
+
+    .feature-2 {
+        right: 0;
+        bottom: 0;
+    }
+
+    .landing-2-banner-1 {
+        display: none;
+    }
+
+    .landing-2-banner-2 {
+        display: none;
+    }
+
+    .landing-banner-ellipse-6 {
+        display: none;
+    }
+
+    /* instructor css */
+
+    .instructor-support {
+        padding-top: 80px;
+        padding-bottom: 150px;
+    }
+
+    .support-instructor-box {
+        position: relative;
+        bottom: -24px;
+        left: unset;
+    }
+
+    /* latest-courses css */
+
+    .latest-courses-landing-2 {
+        margin-top: 30px;
+        padding: 40px 0;
+    }
+
+    /* Category css */
+
+    .course-category-area {
+        padding: 80px 0;
+    }
+
+    .common-product {
+        display: none;
+    }
+
+    /* extensive css */
+
+    .extensive-product-all .owl-nav .owl-prev {
+        margin-left: 0;
+    }
+
+    .extensive-product-all .owl-nav .owl-next {
+        margin-right: 0;
+    }
+
+    .extensive-single-product img {
+        max-width: 170px;
+        height: 170px;
+    }
+
+    /* bundle css */
+
+    .bundle-pt {
+        padding-top: 80px;
+    }
+
+    .bundle-1 {
+        margin-top: 24px;
+    }
+
+    .bundle {
+        margin-top: 24px;
+    }
+
+    .single-bundle-img {
+        display: block;
+    }
+
+    .single-bundle-img {
+        display: block;
+    }
+
+    .single-bundle-img img {
+        width: 100%;
+    }
+
+    .bundle-courses-area {
+        padding-bottom: 100px;
+    }
+
+    .slider-btu {
+        left: 50%;
+        bottom: -49px;
+    }
+
+    /* training css */
+
+    .training-overlay {
+        padding-bottom: 50px;
+        padding-top: 50px;
+    }
+
+    .training-slider-all .owl-nav {
+        left: 50%;
+        bottom: 26px;
+        transform: translateX(-50%);
+    }
+}
+
+@media (min-width: 76px) and (max-width: 767.98px) {
+    /* banner css */
+
+    .landing-feature {
+        display: none;
+    }
+
+    .landing-hero-area > img {
+        display: none;
+    }
+
+    /* instructor css */
+
+    .support-instructor-box {
+        position: relative;
+        bottom: -24px;
+    }
+
+    .instructor-support {
+        padding-top: 80px;
+        padding-bottom: 40px;
+    }
+
+    /* latest css  */
+
+    .latest-courses-landing-2 {
+        margin-top: 0;
+        padding: 80px 0;
+    }
+
+    /*  category css */
+
+    .common-product {
+        display: none;
+    }
+
+    .course-category-area {
+        padding: 80px 0;
+    }
+
+    /* Extensive css */
+
+    .extensive-area-2 {
+        padding: 80px 0;
+    }
+
+    .extensive-single-product {
+        padding: 40px;
+        gap: 24px;
+        flex-direction: column;
+    }
+
+    .extensive-single-product img {
+        height: auto;
+    }
+
+    .extensive-product-all .owl-nav .owl-next {
+        margin-right: 0;
+    }
+
+    .extensive-product-all .owl-nav .owl-prev {
+        margin-left: 0;
+    }
+
+    /* bundle css */
+
+    .bundle-courses-area {
+        padding-bottom: 80px;
+    }
+
+    .bundle-pt {
+        padding-top: 80px;
+        margin-bottom: 24px;
+    }
+
+    .bundle-1 {
+        margin-top: 0px;
+    }
+
+    .bundle {
+        margin-top: 23px;
+    }
+
+    .single-bundle-slider {
+        width: auto;
+    }
+
+    .slider-btu {
+        left: 50%;
+        bottom: -37px;
+    }
+
+    /* training CSS */
+
+    .training-overlay {
+        padding: 80px 14%;
+    }
+
+    .training-slider-all {
+        padding: 39px 0;
+    }
+
+    .training-slider-all .owl-nav {
+        left: 50%;
+        bottom: 7px;
+        margin-left: -58px;
+    }
+
+    /* price css */
+
+    .price-area-landing {
+        padding-top: 80px;
+        padding-bottom: 70px;
+    }
+
+    .landing-tab-price {
+        align-items: start;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .price-label-logo img {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+    }
+
+    .price-landing-page-tab .nav-link .landing-tab-price h6 {
+        font-size: 27px;
+    }
+
+    .price-landing-page-tab .nav-link .landing-tab-price h4 {
+        font-size: 19px;
+    }
+
+    .price-landing-page-tab .nav-link .landing-tab-price p {
+        margin-top: 0px;
+    }
+
+    .landing-tab-price:after {
+        content: none;
+    }
+
+    /* customers css */
+    .customers-says-landing {
+        padding-top: 80px;
+        padding-bottom: 70px;
+    }
+    .testimonial-item {
+        margin-bottom: 0;
+    }
+
+    .sponsor-logo.mt-56 {
+        margin-top: 0;
+    }
+}
+
+/* --------------------------
+  responsive css area end
+ -------------------------------- */
+
+[data-background] {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.sf-section-landing-hero {
+    position: relative;
+}
+/* @media screen and (min-width: 1200px) {
+    .sf-section-landing-hero {
+        padding-top: 170px !important;
+    }
+}
+@media screen and (min-width: 992px) {
+    .sf-section-landing-hero {
+        padding-top: 150px !important;
+    }
+} */
+.sf-section-landing-hero .container {
+    max-width: 1518px;
+}
+.sf-landing-hero-area[data-background] {
+    background-size: contain;
+    background-position: center bottom;
+}
+/*
+@media screen and (max-width: 1199px) {
+    .sf-landing-hero-area {
+        padding: 46px 0;
+    }
+    .sf-landing-hero-area[data-background] {
+        background-size: contain;
+    }
+}*/
+@media screen and (max-width: 991px) {
+    .sf-landing-hero-area[data-background] {
+        background-image: none !important;
+    }
+}
+@media screen and (max-width: 767px) {
+    .sf-landing-banner-text {
+        margin-top: 0 !important;
+        padding: 30px 0 !important;
+    }
+}
+@media screen and (max-width: 767px) {
+    .search-instructor-item {
+        max-width: 381px;
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width: 767px) {
+    .extensive-product-title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .extensive-product-title .section-heading {
+        text-align: center;
+    }
+}
+.mb-la-24 {
+    margin-bottom: 24px !important;
+}
