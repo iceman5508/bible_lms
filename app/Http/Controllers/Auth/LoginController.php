@@ -123,7 +123,11 @@ class LoginController extends Controller
             {
                 return redirect(route('admin.dashboard'));
 
-            } else {
+            }
+            else if(Auth::user()->role == USER_ROLE_STUDENT) {
+                return redirect( route('student.my-learning'));
+            }
+            else {
                 return redirect(route('main.index'));
             }
         }
