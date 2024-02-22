@@ -390,7 +390,7 @@ class CourseController extends Controller
         $course = Course::where('courses.uuid', $uuid)->firstOrFail();
         $user_id = auth()->id();
 
-        if(!$course->user_id == $user_id){
+        if($course->user_id != $user_id){
 
             $courseInstructor = $course->course_instructors()->where('instructor_id', $user_id)->where('status', STATUS_ACCEPTED)->first();
             if(!$courseInstructor){
@@ -408,7 +408,7 @@ class CourseController extends Controller
                 $courseInstructors = $course->course_instructors->where('status', STATUS_PENDING)->where('instructor_id', '!=', $course->user_id);
 
                 foreach ($courseInstructors as $courseInstructor) {
-                    $this->send($text, 2, $target_url, $courseInstructor->instructor->user_id);
+                    $this->send($text, 2, $target_url, $courseInstructor->instructor_id);
                 }
             }
         }elseif($course->status != STATUS_UPCOMING_REQUEST && $course->status != STATUS_UPCOMING_APPROVED) {
@@ -422,7 +422,7 @@ class CourseController extends Controller
                     $courseInstructors = $course->course_instructors->where('status', STATUS_PENDING)->where('instructor_id', '!=', $course->user_id);
     
                     foreach ($courseInstructors as $courseInstructor) {
-                        $this->send($text, 2, $target_url, $courseInstructor->instructor->user_id);
+                        $this->send($text, 2, $target_url, $courseInstructor->instructor_id);
                     }
                     
                     setBadge($course->user_id);

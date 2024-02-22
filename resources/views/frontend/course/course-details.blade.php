@@ -1,5 +1,7 @@
 @extends('frontend.layouts.app')
-
+@php 
+$relation = getUserRoleRelation($course->user);
+@endphp
 @section('meta')
     <meta name="description" content="{{ __($course->meta_description) }}">
     <meta name="keywords" content="{{ __($course->meta_keywords) }}">
@@ -31,7 +33,7 @@
                         <h3 class="page-banner-heading text-white pb-30">{{ __($course->title) }}</h3>
                         <p class="page-banner-sub-heading pb-30">{{ __($course->subtitle) }}</p>
                         <p class="instructor-name-certificate font-medium font-12 text-white">
-                            <span class="text-decoration-underline">{{ @$course->instructor->name }}</span>
+                            <span class="text-decoration-underline">{{ @$course->user->$relation->name }}</span>
                             @if(get_instructor_ranking_level(@$course->user->badges))
                                 | {{ get_instructor_ranking_level(@$course->user->badges) }}
                             @endif

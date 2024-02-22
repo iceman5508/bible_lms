@@ -43,12 +43,10 @@
                     </div>
                 @endif
 
-                <form method="post" action="{{ route('wallet.wallet_recharge.pay') }}" data-cc-on-file="false"
-                    data-stripe-publishable-key="{{ get_option('STRIPE_PUBLIC_KEY') }}" id="payment-form"
+                <form method="post" action="{{ route('wallet.wallet_recharge.pay') }}" data-cc-on-file="false" id="payment-form"
                     class="require-validation" enctype="multipart/form-data">
                     @csrf
                     <input type="hidden" name="amount" value="{{ $amount }}">
-                    <div class="stripeToken"></div>
                     <div class="row">
                         <div class="col-md-8">
                             <div class="checkout-page-left-part">
@@ -71,65 +69,6 @@
                                                         alt="paypal">
                                                 </span>
                                             </label>
-                                        </div>
-                                    @endif
-
-                                    @if (get_option('stripe_status') == 1)
-                                        <div class="form-check payment-method-card-box other-payment-box mb-15">
-                                            <input class="form-check-input" type="radio" name="payment_method"
-                                                value="stripe" {{ old('payment_method') == 'stripe' ? 'checked' : '' }}
-                                                id="stripePayment">
-                                            <label class="form-check-label" for="stripePayment">
-                                                <span class="font-16 color-heading font-medium">{{ __('Pay with Credit Card') }}</span>
-                                                <span class="payment-card-list">
-                                                    <img src="{{ asset('frontend/assets/img/student-profile-img/payment-visa.png') }}"
-                                                        alt="payment">
-                                                    <img src="{{ asset('frontend/assets/img/student-profile-img/payment-discover.png') }}"
-                                                        alt="payment">
-                                                    <img src="{{ asset('frontend/assets/img/student-profile-img/payment-janina1.png') }}"
-                                                        alt="payment">
-                                                    <img src="{{ asset('frontend/assets/img/student-profile-img/payment-mastercard.png') }}"
-                                                        alt="payment">
-                                                </span>
-                                            </label>
-                                            <div class="payment-method-card-info-box">
-                                                <div class="row">
-                                                    <div class="col-md-6 mb-30">
-                                                        <label
-                                                            class="label-text-title color-heading font-medium font-16 mb-3">{{ __('Card Number') }}</label>
-                                                        <input type="text" class="form-control card-number"
-                                                            placeholder="{{ __('1234 5678 9101 3456') }}">
-                                                    </div>
-                                                    <div class="col-md-6 mb-30">
-                                                        <label
-                                                            class="label-text-title color-heading font-medium font-16 mb-3">{{ __('Card Security Code') }}</label>
-                                                        <input type="password" class="form-control card-cvc"
-                                                            placeholder="{{ __('Type your security code') }}">
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-md-6 mb-30">
-                                                        <label
-                                                            class="label-text-title color-heading font-medium font-16 mb-3">{{ __('Expiration Month') }}</label>
-                                                        <input type="text" class="form-control card-expiry-month"
-                                                            placeholder="MM">
-                                                    </div>
-                                                    <div class="col-md-6 mb-30">
-                                                        <label
-                                                            class="label-text-title color-heading font-medium font-16 mb-3">{{ __('Expiration Year') }}</label>
-                                                        <input type="text" class="form-control card-expiry-year"
-                                                            placeholder="YY">
-                                                    </div>
-                                                </div>
-
-                                                <div class="form-row row">
-                                                    <div class="col-md-12 d-none error form-group">
-                                                        <div class="alert-danger alert  stripe-error-message">
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                            </div>
                                         </div>
                                     @endif
 
@@ -183,6 +122,20 @@
                                                 </div>
 
                                             </div>
+                                        </div>
+                                    @endif
+
+                                    @if (get_option('stripe_status') == 1)
+                                        <div class="form-check payment-method-card-box paypal-box pb-0 mt-30">
+                                            <input class="form-check-input" type="radio" name="payment_method"
+                                                   value="stripe" {{ old('payment_method') == 'stripe' ? 'checked' : '' }}
+                                                   id="stripePayment">
+                                            <label class="form-check-label" for="stripePayment">
+                                                <span>
+                                                    <span class="font-16 color-heading font-medium me-3">Stripe</span>
+                                                    <span class="font-14">{{ __('You will be redirected to the stripe website after submitting your order') }}</span>
+                                                </span>
+                                            </label>
                                         </div>
                                     @endif
 
@@ -289,7 +242,7 @@
                                         </label>
                                     </div>
                                     @endif
-                                    
+
                                     @if (get_option('iyzipay_status') == 1)
                                     <div class="form-check payment-method-card-box other-payment-box pb-0 mt-30">
                                         <input class="form-check-input" type="radio" name="payment_method"
@@ -301,7 +254,7 @@
                                         </label>
                                     </div>
                                     @endif
-                                  
+
                                     @if (get_option('bitpay_status') == 1)
                                     <div class="form-check payment-method-card-box other-payment-box pb-0 mt-30">
                                         <input class="form-check-input" type="radio" name="payment_method"
@@ -313,7 +266,7 @@
                                         </label>
                                     </div>
                                     @endif
-                                  
+
                                     @if (get_option('braintree_status') == 1)
                                     <div class="form-check payment-method-card-box other-payment-box pb-0 mt-30">
                                         <input class="form-check-input" type="radio" name="payment_method"
@@ -580,24 +533,9 @@
             obj.cus_addr1 = $('#address').val();
             obj.postal_code = $('#postal_code').val();
             obj.country_name = $('#country_name').val();
-
-            // $('#sslczPayBtn').prop('postdata', obj);
-            // (function(window, document) {
-            //     var loader = function() {
-            //         var script = document.createElement("script"),
-            //             tag = document.getElementsByTagName("script")[0];
-            //         script.src = "https://sandbox.sslcommerz.com/embed.min.js?" + Math.random().toString(36).substring(
-            //             7); // USE THIS FOR SANDBOX
-            //         tag.parentNode.insertBefore(script, tag);
-            //     };
-            //     console.log(loader);
-            //     window.addEventListener ? window.addEventListener("load", loader, false) : window.attachEvent("onload",
-            //         loader);
-            // })(window, document);
         </script>
     @endif
 
     <script src="{{ asset('frontend/assets/js/custom/student-profile.js') }}"></script>
-    <script src="https://js.stripe.com/v2/"></script>
     <script src="{{ asset('frontend/assets/js/custom/checkout.js') }}"></script>
 @endpush

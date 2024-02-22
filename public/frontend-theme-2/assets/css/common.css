@@ -381,9 +381,9 @@ responsive css start
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
     /* banner css */
-    .landing-banner-text {
+    /* .landing-banner-text {
         margin-top: 70px;
-    }
+    } */
 
     .landing-banner-title {
         font-size: 59px;

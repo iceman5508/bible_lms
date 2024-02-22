@@ -42,7 +42,7 @@ class VersionUpdateController extends Controller
 
         $response = Http::acceptJson()->post('https://support.zainikthemes.com/api/745fca97c52e41daa70a99407edf44dd/active', [
             'app' => config('app.app_code'),
-            'is_localhost' => env('IS_LOCAL', true),
+            'is_localhost' => env('IS_LOCAL', false),
             'type' => 1,
             'email' => $request->email,
             'purchase_code' => $request->purchase_code,
@@ -160,7 +160,7 @@ class VersionUpdateController extends Controller
         }
 
         try{
-            $request->update_file->storeAs('/','source-code.zip');
+            $request->update_file->storeAs('/','source-code.zip', 'local');
         }
         catch(\Exception $e){
             return response()->json(

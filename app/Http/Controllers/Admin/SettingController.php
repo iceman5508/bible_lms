@@ -291,11 +291,11 @@ class SettingController extends Controller
 
                 $option->option_value = $file_details['path'];
                 $option->save();
-            } elseif ($key == 'TIMEZONE') {
+            } elseif ($key == 'TIMEZONE' || $key == 'FORCE_HTTPS') {
               
-                setEnvironmentValue('TIMEZONE', $request->TIMEZONE);
+                setEnvironmentValue($key, $value);
 
-                $option->option_value = $request->TIMEZONE;
+                $option->option_value = $value;
                 $option->save();
             } else {
                 $option->option_value = $value;

@@ -36,7 +36,7 @@
                         <h6 class="font-20 font-medium">{{ __('Assignment File') }}</h6>
                         <div class="resource-list-text">
                             <span class="iconify" data-icon="akar-icons:link-chain"></span>
-                            <a href="{{ getImageFile(@$assignment->file) }}" class="text-decoration-underline font-medium">{{ @$assignment->original_filename }}</a>
+                            <a href="{{ getVideoFile(@$assignment->file) }}" class="text-decoration-underline font-medium">{{ @$assignment->original_filename }}</a>
                         </div>
 
                     </div>
@@ -45,7 +45,7 @@
                         <h6 class="font-20 font-medium">{{ __('Your Submit File') }}</h6>
                         <div class="resource-list-text">
                             <span class="iconify" data-icon="akar-icons:link-chain"></span>
-                            <a href="{{ getImageFile(@$assignmentSubmit->file) }}" class="text-decoration-underline font-medium">{{ @$assignmentSubmit->original_filename }}</a>
+                            <a href="{{ getVideoFile(@$assignmentSubmit->file) }}" class="text-decoration-underline font-medium">{{ @$assignmentSubmit->original_filename }}</a>
                         </div>
 
                     </div>

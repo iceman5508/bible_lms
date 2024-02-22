@@ -403,7 +403,7 @@ function studentCourseProgress($course_id, $enrollment_id)
         $result = ($enrollment) ? ($enrollment->completed_time / $course->scorm_course->duration_in_second) * 100 : 0;
     }
 
-    return $result;
+    return min($result, 100);
 }
 
 
@@ -672,7 +672,7 @@ function distributeCommission($order)
 {
     $cashbackType = get_option('cashback_type');
     $cashbackAmount = get_option('cashback_amount');
-    
+
     foreach ($order->items as $order_item) {
         $totalCashback = 0;
         $ownerId = $order_item->owner_user_id;
@@ -704,7 +704,7 @@ function distributeCommission($order)
                     $totalCashback += $cashbackAmount;
                 }
             }
-       
+
             //setCashback
             if($totalCashback > 0){
                 $order->user->increment('balance', decimal_to_int($totalCashback));
@@ -816,7 +816,7 @@ if (!function_exists('setEnrollment')) {
         else{
             $enrollment->user_id = $item->user_id;
         }
-        
+
         $enrollment->owner_user_id = $item->owner_user_id;
         $enrollment->bundle_id = $item->bundle_id;
         $enrollment->course_id = $item->course_id;
@@ -916,10 +916,10 @@ if (!function_exists('setBadge')) {
                 $totalSale = 0;
                 $totalEarning = 0;
             }
-            
+
             $totalStudentCount = Enrollment::where('owner_user_id', $user->id)->groupBy('user_id')->count();
             $totalCourse = Course::where('user_id', $user->id)->count();
-            
+
             //set membership badge
             $typeArray = [RANKING_LEVEL_REGISTRATION => $approvalDuration, RANKING_LEVEL_EARNING => $totalEarning, RANKING_LEVEL_COURSES_COUNT => $totalCourse, RANKING_LEVEL_STUDENTS_COUNT => $totalStudentCount, RANKING_LEVEL_COURSES_SALE_COUNT => $totalSale];
             UserBadge::where('user_id', $user->id)->delete();
@@ -1084,7 +1084,7 @@ if (!function_exists('updateManifest')) {
                 ]
             ]
         ];
-    
+
         file_put_contents(public_path("manifest.json"), json_encode($manifest));
     }
 }
@@ -1279,7 +1279,7 @@ if (!function_exists('getMeta')) {
         $metaData['meta_description'] = $metaData['meta_description'] != NULL ? $metaData['meta_description'] : get_option('app_name');
         $metaData['meta_keyword'] = $metaData['meta_keyword'] != NULL ? $metaData['meta_keyword'] : get_option('app_name');
         $metaData['og_image'] = $metaData['og_image'] != NULL ? getImageFile($metaData['og_image']) : getImageFile(get_option('app_logo'));
-      
+
         return $metaData;
     }
 }
@@ -1291,7 +1291,7 @@ if (!function_exists('getThemePath')) {
         if($theme == THEME_DEFAULT){
             return 'frontend';
         }
-        
+
         return 'frontend-theme-'.$theme;
     }
 }

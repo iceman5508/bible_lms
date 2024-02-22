@@ -67,7 +67,7 @@ class AddonUpdateController extends Controller
         }
 
         try {
-            $request->update_file->storeAs('addons/', $request->code . '.zip');
+            $request->update_file->storeAs('addons/', $request->code . '.zip', 'local');
         } catch (Exception $e) {
             return $this->error([], $e->getMessage());
         }
@@ -194,7 +194,7 @@ class AddonUpdateController extends Controller
                                         $returnResponse['success'] = true;
                                         $returnResponse['message'] = 'Successfully done';
                                         $this->logger->log('Copy file', 'Done');
-                                        
+
                                         Artisan::call('view:clear');
                                         Artisan::call('route:clear');
                                         Artisan::call('config:clear');
@@ -222,7 +222,7 @@ class AddonUpdateController extends Controller
                                         Artisan::call('route:clear');
                                         Artisan::call('config:clear');
                                         Artisan::call('cache:clear');
-                                        
+
                                     } else {
                                         $returnResponse['message'] = 'Your code is not up to date';
                                         $this->logger->log('Version', 'Not matched');
@@ -246,7 +246,7 @@ class AddonUpdateController extends Controller
                                 File::delete($path);
                             }
                             $this->logger->log('Extracted addon zip file', 'Deleted');
-                            
+
                         } else {
                             // return $this->error([], $data->message);
                             $returnResponse['message'] = $versionResponseData->message;

@@ -13,12 +13,14 @@ use Illuminate\Pagination\Paginator;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Blade;
+use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 use DB;
-use Illuminate\Support\Facades\Cookie;
-use Illuminate\Support\Facades\Session;
+use Laravel\Passport\Console\ClientCommand;
+use Laravel\Passport\Console\InstallCommand;
+use Laravel\Passport\Console\KeysCommand;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -41,6 +43,15 @@ class AppServiceProvider extends ServiceProvider
     {
         Schema::defaultStringLength(191);
         Paginator::useBootstrapFive();
+        if(config('app.force_https')) {
+            \URL::forceScheme('https');
+        }
+
+        $this->commands([
+            InstallCommand::class,
+            ClientCommand::class,
+            KeysCommand::class,
+        ]);
 
         /**
          * Create Some Buttons

@@ -11,7 +11,7 @@
                         <h6 class="card-title mb-2"><span class="user_name">{{ @$assignmentSubmitDone->user->name }}</span></h6>
                         <p class="card-text">Email : <span class="user_email">{{ @$assignmentSubmitDone->user->email }}</span></p>
                         <div class="assignment-btn-group d-flex mt-20 mb-2">
-                            <a href="{{ getImageFile($assignmentSubmitDone->file) }}" class="theme-btn bg-green text-white mb-2 downloadAssignment" data-id="{{ $assignmentSubmitDone->id }}">
+                            <a href="{{ getVideoFile($assignmentSubmitDone->file) }}" class="theme-btn bg-green text-white mb-2 downloadAssignment" data-id="{{ $assignmentSubmitDone->id }}">
                                 <span class="iconify" data-icon="akar-icons:download"></span>{{ __('Download') }}
                             </a>
                             <input type="text" readonly value="{{ @$assignmentSubmitDone->marks}}" placeholder="{{ __('Marks') }}">

@@ -32,6 +32,11 @@ class CartManagement extends Model
         return $this->belongsTo(Product::class, 'product_id');
     }
 
+    public function coupon(): BelongsTo
+    {
+        return $this->belongsTo(Coupon::class, 'coupon_id');
+    }
+
     public function consultationSlot(): BelongsTo
     {
         return $this->belongsTo(ConsultationSlot::class, 'consultation_slot_id');

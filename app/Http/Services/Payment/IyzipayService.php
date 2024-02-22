@@ -2,6 +2,7 @@
 
 namespace App\Http\Services\Payment;
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
 use Iyzipay\Model\Address;
 use Iyzipay\Model\BasketItem;
@@ -63,47 +64,42 @@ class IyziPayService extends BasePaymentService
             $IForm->setPaidPrice($amount);
             $IForm->setCurrency($this->currency);
             $IForm->setBasketId($this->memo);
-            $IForm->setPaymentGroup(PaymentGroup::SUBSCRIPTION);
+            $IForm->setPaymentGroup(PaymentGroup::PRODUCT);
             $IForm->setCallbackUrl($this->successUrl);
-            $IForm->setEnabledInstallments(array(2, 3, 6, 9));
-
 
             $IBuyer = new Buyer();
             $IBuyer->setId($this->memo);
-            $IBuyer->setName(env('app_name'));
-            $IBuyer->setSurname('buyer');
-            $IBuyer->setGsmNumber("+905350000000");
-            $IBuyer->setEmail('email@email.com');
-            $IBuyer->setIdentityNumber($this->memo);
-            $IBuyer->setLastLoginDate(date("Y-m-d H:i:s"));
-            $IBuyer->setRegistrationDate(date("Y-m-d H:i:s"));
-            $IBuyer->setRegistrationAddress('email@email.com');
+            $IBuyer->setName(Auth::user()->name);
+            $IBuyer->setSurname(Auth::user()->name);
+            $IBuyer->setEmail(Auth::user()->email);
+            $IBuyer->setIdentityNumber(Auth::user()->student->uuid);
+            $IBuyer->setRegistrationAddress(Auth::user()->address);
             $IBuyer->setIp($_SERVER["REMOTE_ADDR"]);
-            $IBuyer->setCity('no address');
-            $IBuyer->setCountry('no address');
-            $IBuyer->setZipCode(123);
+            $IBuyer->setCity(Auth::user()->student->city->name);
+            $IBuyer->setCountry(Auth::user()->student->country->country_name);
+            $IBuyer->setZipCode(Auth::user()->student->postal_code);
             $IForm->setBuyer($IBuyer);
 
             $IShipping = new Address();
-            $IShipping->setContactName(env('app_name'));
-            $IShipping->setCity('no address');
-            $IShipping->setCountry('no address');
-            $IShipping->setAddress('no address');
-            $IShipping->setZipCode(123);
+            $IShipping->setContactName(Auth::user()->name);
+            $IShipping->setCity(Auth::user()->student->city->name);
+            $IShipping->setCountry(Auth::user()->student->country->country_name);
+            $IShipping->setZipCode(Auth::user()->student->postal_code);
+            $IShipping->setAddress(Auth::user()->address);
             $IForm->setShippingAddress($IShipping);
 
             $IBilling = new Address();
-            $IBilling->setContactName(env('app_name'));
-            $IBilling->setCity('no address');
-            $IBilling->setCountry('no address');
-            $IBilling->setAddress('no address');
-            $IBilling->setZipCode(123);
+            $IBilling->setContactName(Auth::user()->name);
+            $IBilling->setCity(Auth::user()->student->city->name);
+            $IBilling->setCountry(Auth::user()->student->country->country_name);
+            $IBilling->setZipCode(Auth::user()->student->postal_code);
+            $IBilling->setAddress(Auth::user()->address);
             $IForm->setBillingAddress($IBilling);
 
             $FBasketItems = new BasketItem();
             $FBasketItems->setId($this->memo);
-            $FBasketItems->setName(env('app_name') . ' payment');
-            $FBasketItems->setCategory1(env('app_name') . ' payment category');
+            $FBasketItems->setName(Auth::user()->name. '\'s busket');
+            $FBasketItems->setCategory1(Auth::user()->name. '\'s buskets category');
             $FBasketItems->setItemType(BasketItemType::VIRTUAL);
             $FBasketItems->setPrice($amount);
 
@@ -111,6 +107,7 @@ class IyziPayService extends BasePaymentService
 
             $payWithIyzicoInitialize = PayWithIyzicoInitialize::create($IForm, $this->IOptions);
 
+            Log::info("New");
             Log::info("payment");
             Log::info($amount);
             Log::info(json_encode($payWithIyzicoInitialize));

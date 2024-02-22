@@ -72,7 +72,7 @@ class SubscriptionController extends Controller
             $this->showToastrMessage('warning', 'You are not an organization');
             return back();
         }
-        
+
         $data['pageTitle'] = ($subscription->package_type == PACKAGE_TYPE_SUBSCRIPTION) ? __("Subscription Checkout") : __("SaaS Package Checkout");
         $data['price'] = ($request->monthly == 1) ? $subscription->discounted_monthly_price : $subscription->discounted_yearly_price;
         $data['subscription_type'] = ($request->monthly == 1) ? __('Monthly') : __('Yearly');
@@ -95,7 +95,7 @@ class SubscriptionController extends Controller
                     'device' => $subscription->device,
                     'admin_commission' => $subscription->admin_commission,
                 ];
-    
+
                 //add to user package from here
                 $months = ($request->monthly) ? 1 : 12;
                 $userPackageData = $payment_details;
@@ -103,7 +103,7 @@ class SubscriptionController extends Controller
                 $userPackageData['expired_date'] = Carbon::now()->addMonths($months);
                 $userPackageData['status'] = PACKAGE_STATUS_ACTIVE;
                 UserPackage::create($userPackageData);
-            
+
                 $this->showToastrMessage('success', __('Payment has been completed'));
                 DB::commit();
                 return redirect()->route('subscription.thank-you');
@@ -247,6 +247,16 @@ class SubscriptionController extends Controller
             $currency = get_option('paypal_currency');
         }
 
+        if ($request->payment_method == STRIPE) {
+            if (!get_option('stripe_status', 0)) {
+                $this->showToastrMessage('error', 'Stripe payment gateway is off!');
+                return redirect()->back();
+            }
+
+            $conversion_rate = (get_option('stripe_conversion_rate') ? get_option('stripe_conversion_rate') : 0);
+            $currency = get_option('stripe_currency');
+        }
+
         if ($request->payment_method == MOLLIE) {
             if (empty(env('MOLLIE_KEY'))) {
                 $this->showToastrMessage('error', 'Mollie payment gateway is off!');
@@ -312,7 +322,7 @@ class SubscriptionController extends Controller
             $conversion_rate = (get_option('zitopay_conversion_rate') ? get_option('zitopay_conversion_rate') : 0);
             $currency = get_option('zitopay_currency');
         }
-       
+
         if ($request->payment_method == IYZIPAY) {
             if (empty(get_option('iyzipay_key'))) {
                 $this->showToastrMessage('error', 'Iyzipay payment gateway is off!');
@@ -322,7 +332,7 @@ class SubscriptionController extends Controller
             $conversion_rate = (get_option('iyzipay_conversion_rate') ? get_option('iyzipay_conversion_rate') : 0);
             $currency = get_option('iyzipay_currency');
         }
-       
+
         if ($request->payment_method == BITPAY) {
             if (empty(get_option('bitpay_key'))) {
                 $this->showToastrMessage('error', 'Bitpay payment gateway is off!');
@@ -332,7 +342,7 @@ class SubscriptionController extends Controller
             $conversion_rate = (get_option('bitpay_conversion_rate') ? get_option('bitpay_conversion_rate') : 0);
             $currency = get_option('bitpay_currency');
         }
-       
+
         if ($request->payment_method == BRAINTREE) {
             if (empty(get_option('braintree_public_key'))) {
                 $this->showToastrMessage('error', 'Braintree payment gateway is off!');
@@ -453,50 +463,6 @@ class SubscriptionController extends Controller
                 $this->showToastrMessage('error', 'Something went wrong!');
                 return redirect()->back();
             }
-        } else if ($request->payment_method == STRIPE)  {
-
-            $total = $payment->grand_total * (get_option('stripe_conversion_rate') ? get_option('stripe_conversion_rate') : 0);
-            $total = number_format($total, 2,'.','');
-
-            $object = [
-                'id' => $payment->uuid,
-                'payment_method' => STRIPE,
-                'currency' => get_option('stripe_currency'),
-                'token' => $request->stripeToken
-            ];
-            $getWay = new BasePaymentService($object);
-            $responseData = $getWay->makePayment($total);
-
-            if($responseData['success']){
-                if($responseData['data']['payment_status'] == 'success') {
-                    $payment->payment_id = $responseData['payment_id'];
-                    $payment->payment_status = 'paid';
-                    $payment->save();
-
-                    //add to user package from here
-                    $months = ($request->subscription_type) ? 1 : 12;
-                    $userPackageData = json_decode($payment->payment_details, true);
-                    $userPackageData['payment_id'] = $payment->id;
-                    $userPackageData['enroll_date'] = now();
-                    $userPackageData['expired_date'] = Carbon::now()->addMonths($months);
-
-                    UserPackage::join('packages', 'packages.id', '=', 'user_packages.package_id')->where('package_type', $package->package_type)->where('user_packages.user_id', auth()->id())->where('user_packages.status', PACKAGE_STATUS_ACTIVE)->whereDate('enroll_date', '<=', now())->whereDate('expired_date', '>=', now())->update(['user_packages.status' => PACKAGE_STATUS_CANCELED]);
-                    UserPackage::create($userPackageData);
-
-                    /** ====== Send notification =========*/
-                    $text = __("Subscription purchase completed");
-                    $this->send($text, 3, null , auth()->id());
-
-                    $text = __("Subscription has been sold");
-                    $target_url = ($package->package_type == PACKAGE_TYPE_SUBSCRIPTION) ? route('admin.subscriptions.purchase_list') : route('admin.saas.purchase_list');
-                    $this->send($text, 1, $target_url, null);
-                    /** ====== Send notification =========*/
-                    $this->showToastrMessage('success', 'Payment has been completed');
-                    return redirect()->route('subscription.thank-you');
-                }
-            }
-            $this->showToastrMessage('error', 'Something went wrong!');
-            return redirect()->back();
         }else{
             $total = $payment->grand_total * $conversion_rate;
             $total = number_format($total, 2,'.','');

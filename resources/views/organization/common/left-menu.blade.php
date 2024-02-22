@@ -46,6 +46,7 @@
                     <li><a href="{{ route('organization.bookingHistory') }}" class="{{ @$subNavBookingHistoryActiveClass }}">{{ __('Booking History') }}</a></li>
                 </ul>
             </li>
+            <li><a href="{{route('organization.refund.index')}}" class="{{ @$navRefundActiveClass }}" ><span class="iconify mr-15" data-icon="gridicons:refund"></span>{{__('Refund List')}}</a></li>
             <li><a href="{{route('organization.certificate.index')}}" class="{{ @$navCertificateActiveClass }}" ><span class="iconify mr-15" data-icon="fluent:certificate-20-regular"></span>{{__('Certificate')}}</a></li>
 
             <li><a href="{{route('organization.discussion.index')}}" class="{{ @$navDiscussionActiveClass }}" ><span class="iconify mr-15" data-icon="octicon:comment-discussion-24"></span>{{__('Discussion')}}</a></li>

@@ -173,7 +173,7 @@ class CartManagementController extends Controller
                     $cart->price = $cart->bundle->price;
                 }
                 //End:: Bundle Offer Check
-               
+
                 if ($cart->product_id) {
                     $cart->main_price = $cart->product->current_price * $cart->quantity;
                     $cart->price = $cart->product->current_price * $cart->quantity;
@@ -353,7 +353,7 @@ class CartManagementController extends Controller
                 $enrollment = Enrollment::where(['course_id' => $request->course_id , 'user_id' => Auth::user()->id, 'status' => ACCESS_PERIOD_ACTIVE])->whereDate('end_date', '>=', now())->first();
                 if($request->is_gift){
                     $giftUser = User::where('email', $request->receiver_info['receiver_email'])->first();
-                    
+
                     if(!is_null($giftUser)){
                         $giftEnrollment = Enrollment::where(['course_id' => $request->course_id , 'user_id' => $giftUser->id, 'status' => ACCESS_PERIOD_ACTIVE])->whereDate('end_date', '>=', now())->first();
                         if(!is_null($giftEnrollment) && $giftEnrollment->user_id == $giftUser->id){
@@ -370,7 +370,7 @@ class CartManagementController extends Controller
                         return response()->json($response);
                     }
                 }
-                
+
                 if ($enrollment && !$request->is_gift) {
                     $order = Order::find($enrollment->order_id);
                     if ($order) {
@@ -419,7 +419,7 @@ class CartManagementController extends Controller
                     $order_item->owner_balance = 0;
                     $order_item->sell_commission = 0;
                     $order_item->save();
-                   
+
                     setEnrollment($order_item);
 
                     $response['msg'] = __("Your course has been gifted for free");
@@ -642,7 +642,7 @@ class CartManagementController extends Controller
             return response()->json($response);
         }
     }
-    
+
     public function updateCartQuantity(Request $request)
     {
         if (!Auth::check()) {
@@ -650,7 +650,7 @@ class CartManagementController extends Controller
             $response['status'] = 401;
             return response()->json($response);
         }
-        
+
         if($request->quantity < 2 && $request->type == 2){
             $response['msg'] = __("Minimum Quantity is 1");
             $response['status'] = 422;
@@ -658,11 +658,11 @@ class CartManagementController extends Controller
         }
 
         $cart = CartManagement::find($request->id);
-        
-        
+
+
         if($request->type == 1){
             $product = $cart->product;
-    
+
             if($product && $product->quantity < 1){
                 $cart->delete();
                 $response['msg'] = __("Product is out of stock");
@@ -674,7 +674,7 @@ class CartManagementController extends Controller
                 $response['status'] = 422;
                 return response()->json($response);
             }
-            
+
             $cart->increment('quantity', 1);
         }else{
             $cart->decrement('quantity', 1);
@@ -688,7 +688,7 @@ class CartManagementController extends Controller
         $response['status'] = 200;
         return response()->json($response);
     }
-    
+
     public function courseGift($uuid)
     {
         if (!Auth::check()) {
@@ -899,7 +899,7 @@ class CartManagementController extends Controller
                         $this->showToastrMessage('error', __('Something went wrong!'));
                         return redirect()->back();
                     }
-                    
+
                     $order->payment_status = 'paid';
                     $order->save();
 
@@ -1535,37 +1535,19 @@ class CartManagementController extends Controller
                 'id' => $order->uuid,
                 'payment_method' => STRIPE,
                 'currency' => get_option('stripe_currency'),
-                'token' => $request->stripeToken
             ];
+
             $getWay = new BasePaymentService($object);
             $responseData = $getWay->makePayment($total);
 
             if($responseData['success']){
-                if($responseData['data']['payment_status'] == 'success') {
-                    $order->payment_id = $responseData['payment_id'];
-                    $order->payment_status = 'paid';
-                    $order->save();
-
-                    CartManagement::whereUserId(@Auth::id())->delete();
-
-                    distributeCommission($order);
-                    /** ====== Send notification =========*/
-                    $text = __("New student enrolled");
-                    $target_url = route('instructor.all-student');
-                    foreach ($order->items as $item) {
-                        if ($item->course) {
-                            $this->send($text, 2, $target_url, $item->course->user_id);
-                        }
-                    }
-                    $text = __("Course has been sold");
-                    $this->send($text, 1, null, null);
-                    /** ====== Send notification =========*/
-                    $this->showToastrMessage('success', __('Payment has been completed'));
-                    return redirect()->route('student.thank-you');
-                }
+                $order->payment_id = $responseData['payment_id'];
+                $order->save();
+                return Redirect::away($responseData['redirect_url']);
+            }else{
+                $this->showToastrMessage('error', __('Something went wrong!'));
+                return redirect()->back();
             }
-            $this->showToastrMessage('error', __('Something went wrong!'));
-            return redirect()->back();
         }
     }
 

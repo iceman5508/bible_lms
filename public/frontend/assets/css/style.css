@@ -2008,12 +2008,12 @@ button:focus {
 @media screen and (max-width:767px) {
     .testimonial-item.testimonial-landing-2 > div > div:first-child {
         margin: 0 auto;
-    }    
+    }
 }
 @media screen and (max-width:575px) {
     .testimonial-item > div > div:first-child {
         margin: 0 auto;
-    }    
+    }
 }
 .testimonial-item > div > div:first-child img {
     max-width: 100%;
@@ -6681,31 +6681,44 @@ span.tooltip-show-btn {
     right: 10px;
 }
 .google-login {
-    background-color: #db4437 !important;
-    border-color: #db4437 !important;
+    background-color: var(--white-color) !important;
+    border-color: #747775 !important;
+    color: var(--heading-color) !important;
 }
 .google-login:hover {
-    background-color: var(--white-color) !important;
-    color: #db4437 !important;
-    border-color: #db4437 !important;
+    background-color: var(--theme-color) !important;
+    color: var(--white-color) !important;
+    border-color: var(--theme-color) !important;
+}
+.google-login:hover a {
+    color: var(--white-color) !important;
 }
 .facebook-login {
-    background-color: #3b5998 !important;
-    border-color: #3b5998 !important;
+    background-color: var(--white-color) !important;
+    border-color: #485a96 !important;
 }
 .facebook-login:hover {
-    background-color: var(--white-color) !important;
-    color: #3b5998 !important;
-    border-color: #3b5998 !important;
+    background-color: #485a96 !important;
+    color: var(--white-color) !important;
+    border-color: #485a96 !important;
+}
+.facebook-login:hover a {
+    color: var(--white-color) !important;
 }
 .twitter-login {
-    background-color: #55acee !important;
-    border-color: #55acee !important;
+    background-color: var(--white-color) !important;
+    border-color: #0d0d0d !important;
 }
 .twitter-login:hover {
-    background-color: var(--white-color) !important;
-    color: #55acee !important;
-    border-color: #55acee !important;
+    background-color: #0d0d0d !important;
+    color: var(--white-color) !important;
+    border-color: #0d0d0d !important;
+}
+.twitter-login:hover a {
+    color: var(--white-color) !important;
+}
+.twitter-login:hover path {
+    fill: var(--white-color) !important;
 }
 /*-------------------------------------------
     40. Sign Up Page End

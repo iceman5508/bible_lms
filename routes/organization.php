@@ -8,6 +8,7 @@ use App\Http\Controllers\Organization\ChatController;
 use App\Http\Controllers\Organization\CourseController;
 use App\Http\Controllers\Organization\ExamController;
 use App\Http\Controllers\Organization\LessonController;
+use App\Http\Controllers\Organization\RefundController;
 use App\Http\Controllers\Organization\ResourceController;
 use App\Http\Controllers\Organization\ScormController;
 use App\Http\Controllers\Organization\ConsultationController;
@@ -233,3 +234,6 @@ Route::post('zoom-setting', [ZoomSettingController::class, 'zoomSettingUpdate'])
 
 Route::get('gmeet-setting', [GmeetSettingController::class, 'gMeetSetting'])->name('gmeet_setting');
 Route::post('gmeet-setting', [GmeetSettingController::class, 'gMeetSettingUpdate'])->name('gmeet_setting.update');
+
+Route::get('refund', [RefundController::class,'index'])->name('refund.index');
+Route::post('refund-status-change', [RefundController::class,'processRefund'])->name('refund.status-change');

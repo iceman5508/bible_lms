@@ -41,7 +41,7 @@
                                         <td>
                                             <div class="resource-list-text">
                                                 <span class="iconify" data-icon="akar-icons:link-chain"></span>
-                                                <a href="{{ getImageFile($resource->file) }}"
+                                                <a href="{{ getVideoFile($resource->file) }}"
                                                    class="text-decoration-underline">{{ @$resource->original_filename }}</a>
                                             </div>
                                         </td>

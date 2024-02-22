@@ -170,7 +170,7 @@ class AssignmentController extends Controller
         $assignmentSubmit = $this->assignmentSubmitModel->getRecordById($request->id);
         if ($assignmentSubmit->file){
 
-            $filepath = public_path($assignmentSubmit->file);
+            $filepath = getVideoFile($assignmentSubmit->file);
             return response()->download($filepath);
         } else {
             $data['msg'] = __('No File Found!');

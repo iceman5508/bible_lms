@@ -12,7 +12,7 @@
                         <h6 class="card-title mb-2">{{ @$assignmentSubmitPending->user->name }}</h6>
                         <p class="card-text">{{ __('Email') }} : {{ @$assignmentSubmitPending->user->email }}</p>
                         <div class="assignment-btn-group d-flex mt-20 mb-2">
-                            <a href="{{ getImageFile($assignmentSubmitPending->file) }}" class="theme-btn bg-green text-white mb-2 downloadAssignment" data-id="{{ $assignmentSubmitPending->id }}">
+                            <a href="{{ getVideoFile($assignmentSubmitPending->file) }}" class="theme-btn bg-green text-white mb-2 downloadAssignment" data-id="{{ $assignmentSubmitPending->id }}">
                                 <span class="iconify" data-icon="akar-icons:download"></span>{{ __('Download') }}
                             </a>
                             <input name="marks" class="mb-2" type="number" min="0" step="any" placeholder="{{ __('Marks') }}" required

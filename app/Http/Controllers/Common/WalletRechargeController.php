@@ -182,6 +182,16 @@ class WalletRechargeController extends Controller
             $currency = get_option('paypal_currency');
         }
 
+        if ($request->payment_method == STRIPE) {
+            if (!get_option('stripe_status', 0)) {
+                $this->showToastrMessage('error', 'Stripe payment gateway is off!');
+                return redirect()->back();
+            }
+
+            $conversion_rate = (get_option('stripe_conversion_rate') ? get_option('stripe_conversion_rate') : 0);
+            $currency = get_option('stripe_currency');
+        }
+
         if ($request->payment_method == MOLLIE) {
             if (empty(env('MOLLIE_KEY'))) {
                 $this->showToastrMessage('error', 'Mollie payment gateway is off!');
@@ -268,7 +278,7 @@ class WalletRechargeController extends Controller
             $conversion_rate = (get_option('bitpay_conversion_rate') ? get_option('bitpay_conversion_rate') : 0);
             $currency = get_option('bitpay_currency');
         }
-        
+
         if ($request->payment_method == BRAINTREE) {
             if (empty(get_option('braintree_key'))) {
                 $this->showToastrMessage('error', 'Braintree payment gateway is off!');
@@ -297,7 +307,7 @@ class WalletRechargeController extends Controller
             $payment->bank_id = $request->bank_id;
             $payment->save();
 
-           
+
             //add to wallet_recharge
             WalletRecharge::create([
                 'payment_id' => $payment->id,
@@ -372,50 +382,6 @@ class WalletRechargeController extends Controller
                 $this->showToastrMessage('error', 'Something went wrong!');
                 return redirect()->back();
             }
-        } else if ($request->payment_method == STRIPE)  {
-
-            $total = $payment->grand_total * (get_option('stripe_conversion_rate') ? get_option('stripe_conversion_rate') : 0);
-            $total = number_format($total, 2,'.','');
-
-            $object = [
-                'id' => $payment->uuid,
-                'payment_method' => STRIPE,
-                'currency' => get_option('stripe_currency'),
-                'token' => $request->stripeToken
-            ];
-            $getWay = new BasePaymentService($object);
-            $responseData = $getWay->makePayment($total);
-
-            if($responseData['success']){
-                if($responseData['data']['payment_status'] == 'success') {
-                    $payment->payment_id = $responseData['payment_id'];
-                    $payment->payment_status = 'paid';
-                    $payment->save();
-
-                    //add to wallet_recharge
-                    $walletRecharge = WalletRecharge::create([
-                        'payment_id' => $payment->id,
-                        'amount' => $payment->sub_total,
-                        'payment_method' => $payment->payment_method,
-                        'type' => PAYMENT_TYPE_WALLET_RECHARGE
-                    ]);
-
-                    createTransaction(auth()->id(), $payment->sub_total, TRANSACTION_WALLET_RECHARGE, 'Wallet Recharge', 'Recharge (' . $walletRecharge->id . ')', $walletRecharge->id);
-                    $payment->user->increment('balance', decimal_to_int($payment->sub_total));
-
-                    /** ====== Send notification =========*/
-                    $text = __("Wallet recharge completed");
-                    $this->send($text, 3, null , auth()->id());
-
-                    $text = __("Wallet Recharge");
-                    $this->send($text, 1, null, null);
-                    /** ====== Send notification =========*/
-                    $this->showToastrMessage('success', 'Payment has been completed');
-                    return redirect()->route('wallet_recharge.thank-you');
-                }
-            }
-            $this->showToastrMessage('error', 'Something went wrong!');
-            return redirect()->back();
         }else{
             $total = $payment->grand_total * $conversion_rate;
             $total = number_format($total, 2,'.','');

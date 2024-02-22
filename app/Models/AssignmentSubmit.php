@@ -10,6 +10,17 @@ class AssignmentSubmit extends Model
 {
     use HasFactory;
 
+    protected $appends = ['file_url'];
+
+    public function getFileUrlAttribute()
+    {
+        if ($this->file) {
+            return getVideoFile($this->file);
+        } else {
+            return asset('uploads/default/course.jpg');
+        }
+    }
+
     public function user()
     {
         return $this->belongsTo(User::class);

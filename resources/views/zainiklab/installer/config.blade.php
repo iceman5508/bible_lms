@@ -100,7 +100,7 @@
                 <div class="form-group">
                   <label for="MailPort">Port</label>
                   <input type="text" class="form-control" id="MailPort" name="mail_port" value="{{ $_ENV['MAIL_PORT'] }}" placeholder="Type your mail port" />
-                </div!>
+                </div>
               </div>
               <div class="col-md-6">
                 <div class="form-group">

@@ -158,7 +158,7 @@
                                                 {{ get_option('current_version') }} <i data-bs-toggle="tooltip"
                                                     data-bs-placement="top" title="Application Current Version"
                                                     class="fa fa-warning text-danger"></i>
-                                                <a href="{{ route('admin.file-version-update') }}"
+                                                <a href="{{ route('settings.file-version-update') }}"
                                                     class="link-info">{{ __('Update') }}</a>
                                             @endif
                                         </td>

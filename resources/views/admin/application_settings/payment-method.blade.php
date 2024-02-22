@@ -192,18 +192,18 @@
                                         </div>
                                         <div class="col-md-12 mb-3">
                                             <div class="form-group text-black">
-                                                <label>{{ __('Stripe Public Key') }}</label>
+                                                <label>{{ __('Stripe Secret Key') }}</label>
                                                 <input type="text" name="STRIPE_PUBLIC_KEY"
                                                        value="{{ get_option('STRIPE_PUBLIC_KEY') }}" class="form-control">
                                             </div>
                                         </div>
-                                        <div class="col-md-12 mb-3">
-                                            <div class="form-group text-black">
-                                                <label>{{ __('Stripe Secret Key') }}</label>
-                                                <input type="text" name="STRIPE_SECRET_KEY"
-                                                       value="{{ get_option('STRIPE_SECRET_KEY') }}" class="form-control">
-                                            </div>
-                                        </div>
+{{--                                        <div class="col-md-12 mb-3">--}}
+{{--                                            <div class="form-group text-black">--}}
+{{--                                                <label>{{ __('Stripe Secret Key') }}</label>--}}
+{{--                                                <input type="text" name="STRIPE_SECRET_KEY"--}}
+{{--                                                       value="{{ get_option('STRIPE_SECRET_KEY') }}" class="form-control">--}}
+{{--                                            </div>--}}
+{{--                                        </div>--}}
                                     </div>
                                 </div>
 
@@ -727,7 +727,7 @@
                                 </div>
                                 <div class="payment-getaway admin-dashboard-payment-content-box-left col-md-6 border p-3">
                                     <div class="row mb-3">
-    
+
                                         <div class="col-md-12">
                                             <div class="form-group text-black">
                                                 <label>{{ __('Currency ISO Code') }} </label>
@@ -778,7 +778,7 @@
                                             </div>
                                         </div>
                                     </div>
-    
+
                                     <div class="row mb-3">
                                         <div class="col-md-12">
                                             <div class="form-group text-black">
@@ -801,7 +801,7 @@
                             <div class="row justify-content-center px-3 pb-0 mb-3">
                                 <div class="payment-getaway admin-dashboard-payment-content-box-left col-md-6 border p-3">
                                     <div class="row mb-3">
-    
+
                                         <div class="col-md-12">
                                             <div class="form-group text-black">
                                                 <label>{{ __('Currency ISO Code') }} </label>
@@ -837,7 +837,7 @@
                                             </div>
                                         </div>
                                     </div>
-    
+
                                     <div class="row mb-3">
                                         <div class="col-md-12">
                                             <div class="form-group text-black">
@@ -849,7 +849,7 @@
                                 </div>
                                 <div class="payment-getaway admin-dashboard-payment-content-box-left col-md-6 border p-3">
                                     <div class="row mb-3">
-    
+
                                         <div class="col-md-12">
                                             <div class="form-group text-black">
                                                 <label>{{ __('Currency ISO Code') }} </label>
@@ -901,7 +901,7 @@
                                             </div>
                                         </div>
                                     </div>
-    
+
                                     <div class="row mb-3">
                                         <div class="col-md-12">
                                             <div class="form-group text-black">
@@ -910,7 +910,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                   
+
                                     <div class="row mb-3">
                                         <div class="col-md-12">
                                             <div class="form-group text-black">
@@ -921,7 +921,7 @@
                                     </div>
                                 </div>
                             </div>
-                           
+
                             <div class="row justify-content-center p-3 pb-0">
                                 <div
                                     class="admin-dashboard-payment-title-left col-6 border border-bottom-0 pr-4 text-center">
@@ -934,7 +934,7 @@
                             <div class="row justify-content-center px-3 pb-0 mb-3">
                                 <div class="payment-getaway admin-dashboard-payment-content-box-left col-md-6 border p-3">
                                     <div class="row mb-3">
-    
+
                                         <div class="col-md-12">
                                             <div class="form-group text-black">
                                                 <label>{{ __('Currency ISO Code') }} </label>
@@ -986,7 +986,7 @@
                                             </div>
                                         </div>
                                     </div>
-    
+
                                     <div class="row mb-3">
                                         <div class="col-md-12">
                                             <div class="form-group text-black">
@@ -998,7 +998,7 @@
                                 </div>
                                 <div class="payment-getaway admin-dashboard-payment-content-box-left col-md-6 border p-3">
                                     <div class="row mb-3">
-    
+
                                         <div class="col-md-12">
                                             <div class="form-group text-black">
                                                 <label>{{ __('Currency ISO Code') }} </label>
@@ -1050,7 +1050,7 @@
                                             </div>
                                         </div>
                                     </div>
-    
+
                                     <div class="row mb-3">
                                         <div class="col-md-12">
                                             <div class="form-group text-black">
@@ -1059,7 +1059,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                   
+
                                     <div class="row mb-3">
                                         <div class="col-md-12">
                                             <div class="form-group text-black">
@@ -1068,7 +1068,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                   
+
                                     <div class="row mb-3">
                                         <div class="col-md-12">
                                             <div class="form-group text-black">

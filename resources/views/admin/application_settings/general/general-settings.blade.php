@@ -118,8 +118,6 @@
                                 </div>
                             </div>
 
-
-
                             <div class="row input__group mb-25">
                                 <label for="app_date_format" class="col-lg-3">{{__('Default Currency')}} <span class="text-danger">*</span></label>
                                 <div class="col-lg-9">
@@ -128,6 +126,16 @@
                                         @foreach($currencies as $currency)
                                         <option value="{{ $currency->id }}" {{$currency->id == @$current_currency->id ? 'selected' : ''}} > {{ $currency->symbol }}</option>
                                         @endforeach
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="row input__group mb-25">
+                                <label for="app_date_format" class="col-lg-3">{{__('Force HTTPS')}} <span class="text-danger">*</span></label>
+                                <div class="col-lg-9">
+                                    <select name="FORCE_HTTPS" class="form-control select2">
+                                        <option value="true" {{config('app.force_https') == true ? 'selected' : ''}} > {{ __('TRUE') }}</option>
+                                        <option value="false" {{config('app.force_https') == false ? 'selected' : ''}} > {{ __('FALSE') }}</option>
                                     </select>
                                 </div>
                             </div>

@@ -63,7 +63,7 @@
                                 @if ($assignment->file)
                                 <div class="label-text-title color-heading font-medium font-16 mb-3">
                                     {{ __('Present File') }} :
-                                    <a href="{{ getImageFile($assignment->file) }}" target="_blank">
+                                    <a href="{{ getVideoFile($assignment->file) }}" target="_blank">
                                         {{ $assignment->original_filename }}
                                     </a>
                                 </div>

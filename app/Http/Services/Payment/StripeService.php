@@ -1,101 +1,89 @@
 <?php
 
-
 namespace App\Http\Services\Payment;
 
+use Stripe\StripeClient;
 
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Log;
-use Stripe;
-
-class StripeService
+class StripeService extends BasePaymentService
 {
-    public  $getway ;
-//    private $successUrl ;
-//    private $cancelUrl ;
+    public  $stripClient;
+
+
+    public  $gateway ;
+    private $successUrl ;
+    private $cancelUrl ;
     private $provider ;
-    private $currency ;
-    private $token ;
+    public $currency ;
 
     public function __construct($object)
     {
-//        if(!isset($object->id)){
-//            $this->cancelUrl = route('paymentCancel',$object['id']);
-//            $this->successUrl = route('paymentNotify',$object['id']);
-//        }
+        if(isset($object['id'])){
+            $this->cancelUrl = isset($object['cancelUrl ']) ? $object['cancelUrl '] : route('paymentCancel', $object['id']);
+            $this->successUrl = isset($object['successUrl']) ? $object['successUrl'] : route('paymentNotify', $object['id']);
+        }
+
+        $this->stripClient = new StripeClient(get_option('STRIPE_PUBLIC_KEY'));
         $this->provider = $object['payment_method'];
         $this->currency = $object['currency'];
-        $this->token = $object['token'];
-//        $this->gateway = new Stripe();
-//        $this->gateway->setApiKey(env('STRIPE_SECRET_KEY'));
-
-//        $mollie =
-//        $mollie->setApiKey(env('MOLLIE_KEY'));
-
     }
-    public function makePayment($price){
-//        $price = 12.34;
+
+    public function makePayment($amount, $post_data = null)
+    {
         $data['success'] = false;
         $data['redirect_url'] = '';
         $data['payment_id'] = '';
         $data['message'] = '';
-        Stripe\Stripe::setApiKey(env('STRIPE_SECRET_KEY'));
-        $payment = Stripe\Charge::create ([
-            "amount" => ($price * 100),
-            "currency" => $this->currency,
-            "source" => $this->token,
-            "description" => 'Payment for purchase'
+
+        $payment = $this->stripClient->checkout->sessions->create([
+            'success_url' => $this->successUrl,
+            'cancel_url' => $this->cancelUrl,
+            'line_items' => [
+                [
+                    'price_data' => [
+                        'currency' => $this->currency,
+                        'product_data' => [
+                            'name' => 'Amount',
+                        ],
+                        'unit_amount' =>$amount * 100,
+                    ],
+                    'quantity' => 1,
+                ]
+            ],
+            'mode' => 'payment',
         ]);
 
         try {
-            if ($payment->status == 'succeeded') {
-                $data['payment_id'] = $payment->id;
+
+            if ($payment->status == 'open') {
+                $data['payment_id'] = $payment->payment_intent;
                 $data['success'] = true;
-                $data['data']['amount'] = int_to_decimal($payment->amount);
-                $data['data']['currency'] = $payment->currency;
-                $data['data']['payment_status'] =  'success' ;
-                $data['data']['payment_method'] = STRIPE;
-            }else{
-                $data['success'] = false;
-                $data['data']['payment_status'] =  'unpaid' ;
-                $data['data']['payment_method'] = STRIPE;
+                $data['redirect_url'] = $payment->url;
             }
+
+            return $data;
         } catch (\Exception $ex) {
             return $data['message'] = $ex->getMessage();
         }
-        return $data;
     }
 
-    public function paymentConfirmation($payment_id)
+    public function paymentConfirmation($payment_id, $payer_id=NULL)
     {
-
-        $data['success'] = false;
         $data['data'] = null;
-
-//        $payment = $this->gateway->payments->get($payment_id);
-//        if ($payment->isPaid()) {
-//            $data['success'] = true;
-//            $data['data']['amount'] = $payment->amount->value;
-//            $data['data']['currency'] = $payment->amount->currency;
-//            $data['data']['payment_status'] =  'success' ;
-//            $data['data']['payment_method'] = MOLLIE;
-//            // Store in your local database that the transaction was paid successfully
-//        } elseif ($payment->isCanceled() || $payment->isExpired()) {
-//            $data['success'] = false;
-//            $data['data']['amount'] = $payment->amount->value;
-//            $data['data']['currency'] = $payment->amount->currency;
-//            $data['data']['payment_status'] =  'unpaid' ;
-//            $data['data']['payment_method'] = MOLLIE;
-//        }else{
-//            $data['success'] = false;
-//            $data['data']['amount'] = $payment->amount->value;
-//            $data['data']['currency'] = $payment->amount->currency;
-//            $data['data']['payment_status'] =  'unpaid' ;
-//            $data['data']['payment_method'] = MOLLIE;
-//        }
-
+        $payment = $this->stripClient->paymentIntents->retrieve($payment_id, []);
+        if ($payment->status == 'succeeded') {
+            $data['success'] = true;
+            $data['data']['amount'] = $payment->amount_received;
+            $data['data']['currency'] = $payment->currency;
+            $data['data']['payment_status'] =  'success';
+            $data['data']['payment_method'] = STRIPE;
+        } else {
+            $data['success'] = false;
+            $data['data']['amount'] = $payment->amount;
+            $data['data']['currency'] = $payment->currency;
+            $data['data']['payment_status'] =  'unpaid';
+            $data['data']['payment_method'] = STRIPE;
+        }
 
         return $data;
     }
-
 }

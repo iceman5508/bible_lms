@@ -29,19 +29,6 @@ Route::group(['as' => 'affiliate.','prefix'=>'affiliate'], function () {
     });
     Route::get('my-affiliate-list',[AffiliateController::class, 'myAffiliations'])->name('my-affiliate-list');
 
-
-//    Route::get('request-list', [AffiliateController::class, 'requestList'])->name('request-list');
-//    Route::post('become-affiliate-apply', [AffiliateController::class, 'becomeAffiliateApply'])->name('become-affiliate.apply');
-
-
-//    Route::get('your-application', function(){
-//        return view('frontend.affiliator.your-application');
-//    });
-//
-//    Route::get('affiliate-add-payment-method', function(){
-//        return view('frontend.affiliator.affiliate-add-payment-method');
-//    });
-// Suraiya Static for Affiliate Pages End
 });
 
 Route::group(['middleware' => ['common']],function(){

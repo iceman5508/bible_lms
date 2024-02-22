@@ -51,7 +51,7 @@ class PaypalService
         $data['message'] = '';
         try {
             if ($response->isRedirect()) {
-                $data['redirect_url'] = $response->redirect();
+                $data['redirect_url'] =  $response->getData()['links'][1]['href'];
                 $data['payment_id'] = $response->getData()['id'];
                 $data['success'] = true;
             }
