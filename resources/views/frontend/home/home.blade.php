@@ -52,9 +52,9 @@
 
                             <p>{{ __(@$home->banner_subtitle) }} </p>
                             @if(!get_option('private_mode') || !auth()->guest())
-                            <div class="hero-btns">
-                                <a href="{{ route('courses') }}" class="theme-btn theme-button1">{{ __('Browse Course') }} <i data-feather="arrow-right"></i></a>
-                            </div>
+{{--                            <div class="hero-btns">--}}
+{{--                                <a href="{{ route('courses') }}" class="theme-btn theme-button1">{{ __('Browse Course') }} <i data-feather="arrow-right"></i></a>--}}
+{{--                            </div>--}}
                             @endif
                         </div>
                     </div>
@@ -170,7 +170,7 @@
         </div>
     </section>
     <!-- All Courses Area END -->
-    @endif 
+    @endif
 
     @if($home->category_courses_area == 1)
     <!-- Board Selection of Courses Area Start -->
@@ -790,7 +790,7 @@
     <!-- FAQ Area End -->
     @endif
 
-    
+
     @if($home->instructor_support_area == 1)
     <!-- Course Instructor and Support Area Start -->
     <section class="course-instructor-support-area bg-light section-t-space">

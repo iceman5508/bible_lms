@@ -38,9 +38,9 @@
             <!-- Courses Filter Bar Start-->
             <div class="col-12">
                 <div class="courses-filter-bar d-flex align-items-start justify-content-between">
-                    <div class="filter-bar-left">
-                        <a href="{{ route('courses') }}" class="theme-btn theme-button1 theme-button3">{{__('Browse More Course')}}</a>
-                    </div>
+{{--                    <div class="filter-bar-left">--}}
+{{--                        <a href="{{ route('courses') }}" class="theme-btn theme-button1 theme-button3">{{__('Browse More Course')}}</a>--}}
+{{--                    </div>--}}
 
                     <div class="filter-bar-right">
                         <div class="filter-box d-flex align-items-center justify-content-end bg-white">
@@ -111,7 +111,7 @@
         </div>
     </div>
     <!--Write Review Modal End-->
-    
+
     <!--Refund Modal Start-->
     <div class="modal fade" id="refundModal" tabindex="-1" aria-labelledby="refundModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">

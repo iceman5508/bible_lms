@@ -14,56 +14,56 @@
             </button>
             <div class="main-menu-collapse collapse navbar-collapse" id="navbarSupportedContent">
 
-                <div class="header-nav-left-side me-auto d-flex">
-                    <ul class="navbar-nav mb-2 mb-lg-0">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="librariesDropdown"
-                                data-bs-toggle="dropdown">
-                                {{ __('Courses') }}
-                            </a>
-                            <ul class="dropdown-menu {{$selectedLanguage->rtl == 1 ? 'dropdown-menu-end' : ''}}">
-                                @foreach($categories as $category)
-                                <li>
-                                    <a href="{{ route('category-courses', $category->slug) }}"
-                                        class="dropdown-item @if(count($category->subcategories) > 0) dropdown-toggle @endif">{{
-                                        $category->name }}</a>
-                                    @if(count($category->subcategories) > 0)
-                                    <ul class="submenu dropdown-menu">
-                                        @foreach($category->subcategories as $subcategory)
-                                        <li><a class="dropdown-item"
-                                                href="{{ route('subcategory-courses', $subcategory->slug) }}">{{
-                                                $subcategory->name }}</a></li>
-                                        @endforeach
-                                    </ul>
-                                    @endif
-                                </li>
-                                @endforeach
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a href="{{ route('courses') }}">{{ __('All Courses') }}</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+{{--                <div class="header-nav-left-side me-auto d-flex">--}}
+{{--                    <ul class="navbar-nav mb-2 mb-lg-0">--}}
+{{--                        <li class="nav-item dropdown">--}}
+{{--                            <a class="nav-link dropdown-toggle" href="#" id="librariesDropdown"--}}
+{{--                                data-bs-toggle="dropdown">--}}
+{{--                                {{ __('Courses') }}--}}
+{{--                            </a>--}}
+{{--                            <ul class="dropdown-menu {{$selectedLanguage->rtl == 1 ? 'dropdown-menu-end' : ''}}">--}}
+{{--                                @foreach($categories as $category)--}}
+{{--                                <li>--}}
+{{--                                    <a href="{{ route('category-courses', $category->slug) }}"--}}
+{{--                                        class="dropdown-item @if(count($category->subcategories) > 0) dropdown-toggle @endif">{{--}}
+{{--                                        $category->name }}</a>--}}
+{{--                                    @if(count($category->subcategories) > 0)--}}
+{{--                                    <ul class="submenu dropdown-menu">--}}
+{{--                                        @foreach($category->subcategories as $subcategory)--}}
+{{--                                        <li><a class="dropdown-item"--}}
+{{--                                                href="{{ route('subcategory-courses', $subcategory->slug) }}">{{--}}
+{{--                                                $subcategory->name }}</a></li>--}}
+{{--                                        @endforeach--}}
+{{--                                    </ul>--}}
+{{--                                    @endif--}}
+{{--                                </li>--}}
+{{--                                @endforeach--}}
+{{--                                <li>--}}
+{{--                                    <hr class="dropdown-divider">--}}
+{{--                                </li>--}}
+{{--                                <li><a href="{{ route('courses') }}">{{ __('All Courses') }}</a></li>--}}
+{{--                            </ul>--}}
+{{--                        </li>--}}
+{{--                    </ul>--}}
 
-                    <form action="#">
-                        <div class="input-group landing">
-                            <button class="input-group-text pe-0" id="basic-addon1"><img
-                                    src="{{ asset('frontend/assets/img/icons-svg/search.svg') }}" alt="Search"></button>
-                            <input class="form-control me-2 searchCourse" id="searchCourse" type="search" name="keyword"
-                                value="{{request('keyword')}}" placeholder="{{__('Search Course')}}..."
-                                aria-label="Search">
-                        </div>
+{{--                    <form action="#">--}}
+{{--                        <div class="input-group landing">--}}
+{{--                            <button class="input-group-text pe-0" id="basic-addon1"><img--}}
+{{--                                    src="{{ asset('frontend/assets/img/icons-svg/search.svg') }}" alt="Search"></button>--}}
+{{--                            <input class="form-control me-2 searchCourse" id="searchCourse" type="search" name="keyword"--}}
+{{--                                value="{{request('keyword')}}" placeholder="{{__('Search Course')}}..."--}}
+{{--                                aria-label="Search">--}}
+{{--                        </div>--}}
 
-                        <!-- Search Bar Suggestion Box Start -->
-                        <div class="search-bar-suggestion-box searchBox d-none custom-scrollbar">
-                            <ul class="appendCourseSearchList">
+{{--                        <!-- Search Bar Suggestion Box Start -->--}}
+{{--                        <div class="search-bar-suggestion-box searchBox d-none custom-scrollbar">--}}
+{{--                            <ul class="appendCourseSearchList">--}}
 
-                            </ul>
-                        </div>
-                        <!-- Search Bar Suggestion Box End -->
-                    </form>
-                </div>
+{{--                            </ul>--}}
+{{--                        </div>--}}
+{{--                        <!-- Search Bar Suggestion Box End -->--}}
+{{--                    </form>--}}
+{{--                </div>--}}
                 <div class="header-nav-right-side d-flex">
                     <ul class="navbar-nav">
 {{--                        <li class="nav-item dropdown">--}}
