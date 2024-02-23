@@ -1,4 +1,4 @@
-@php 
+@php
     $authUser = @auth()->user();
 @endphp
 
@@ -66,21 +66,21 @@
                 </div>
                 <div class="header-nav-right-side d-flex">
                     <ul class="navbar-nav">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown"
-                                data-bs-toggle="dropdown">{{__('Pages')}}</a>
-                            <ul class="dropdown-menu {{$selectedLanguage->rtl == 1 ? 'dropdown-menu-end' : ''}}">
-                                @foreach($staticMenus ?? [] as $staticMenu)
-                                <li><a class="dropdown-item" href="{{ route( $staticMenu->slug ) }}">{{
-                                        __($staticMenu->name) }}</a></li>
-                                @endforeach
+{{--                        <li class="nav-item dropdown">--}}
+{{--                            <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown"--}}
+{{--                                data-bs-toggle="dropdown">{{__('Pages')}}</a>--}}
+{{--                            <ul class="dropdown-menu {{$selectedLanguage->rtl == 1 ? 'dropdown-menu-end' : ''}}">--}}
+{{--                                @foreach($staticMenus ?? [] as $staticMenu)--}}
+{{--                                <li><a class="dropdown-item" href="{{ route( $staticMenu->slug ) }}">{{--}}
+{{--                                        __($staticMenu->name) }}</a></li>--}}
+{{--                                @endforeach--}}
 
-                                @foreach($dynamicMenus ?? [] as $dynamicMenu)
-                                <li><a class="dropdown-item" href="{{ route('page', @$dynamicMenu->page->slug) }}">{{
-                                        __($dynamicMenu->name) }}</a></li>
-                                @endforeach
-                            </ul>
-                        </li>
+{{--                                @foreach($dynamicMenus ?? [] as $dynamicMenu)--}}
+{{--                                <li><a class="dropdown-item" href="{{ route('page', @$dynamicMenu->page->slug) }}">{{--}}
+{{--                                        __($dynamicMenu->name) }}</a></li>--}}
+{{--                                @endforeach--}}
+{{--                            </ul>--}}
+{{--                        </li>--}}
                         @if(@$authUser->role == USER_ROLE_INSTRUCTOR || @$authUser->role == USER_ROLE_STUDENT || @$authUser->role == USER_ROLE_ORGANIZATION)
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('forum.index') }}">{{__('Forum')}}</a>
@@ -91,10 +91,10 @@
                             <span class="nav-link">{{__('Request Pending')}}</span>
                         </li>
                         @else
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{route('student.become-an-instructor')}}">{{__('Become an
-                                Instructor')}}</a>
-                        </li>
+{{--                        <li class="nav-item">--}}
+{{--                            <a class="nav-link" href="{{route('student.become-an-instructor')}}">{{__('Become an--}}
+{{--                                Instructor')}}</a>--}}
+{{--                        </li>--}}
                         @endif
                         @elseif(@$authUser->role == USER_ROLE_INSTRUCTOR || @$authUser->role == USER_ROLE_ORGANIZATION)
                         <!-- Status 1 = Approved,  Status 2 = Blocked,  Status 0 = Pending -->
@@ -143,19 +143,19 @@
                             <a class="nav-link" aria-current="page" href="{{ route('contact') }}">{{__('Contact')}}</a>
                         </li>
                         @endif
-                        <li class="nav-item dropdown menu-round-btn menu-language-btn dropdown-top-space">
-                            <a class="nav-link" href="#">
-                                <img src="{{asset($selectedLanguage->flag)}}" alt="Flag" class="radius-50">
-                            </a>
-                            <ul class="dropdown-menu {{$selectedLanguage->rtl == 1 ? 'dropdown-menu-start' : 'dropdown-menu-end'}}"
-                                data-bs-popper="none">
-                                @foreach(appLanguages() as $app_lang)
-                                <li><a class="dropdown-item" href="{{ url('/local/'.$app_lang->iso_code) }}">
-                                        <img src="{{asset($app_lang->flag)}}" alt="Flag"
-                                            class="radius-50">{{$app_lang->language}}</a></li>
-                                @endforeach
-                            </ul>
-                        </li>
+{{--                        <li class="nav-item dropdown menu-round-btn menu-language-btn dropdown-top-space">--}}
+{{--                            <a class="nav-link" href="#">--}}
+{{--                                <img src="{{asset($selectedLanguage->flag)}}" alt="Flag" class="radius-50">--}}
+{{--                            </a>--}}
+{{--                            <ul class="dropdown-menu {{$selectedLanguage->rtl == 1 ? 'dropdown-menu-start' : 'dropdown-menu-end'}}"--}}
+{{--                                data-bs-popper="none">--}}
+{{--                                @foreach(appLanguages() as $app_lang)--}}
+{{--                                <li><a class="dropdown-item" href="{{ url('/local/'.$app_lang->iso_code) }}">--}}
+{{--                                        <img src="{{asset($app_lang->flag)}}" alt="Flag"--}}
+{{--                                            class="radius-50">{{$app_lang->language}}</a></li>--}}
+{{--                                @endforeach--}}
+{{--                            </ul>--}}
+{{--                        </li>--}}
                         @if(@$authUser->role != USER_ROLE_ADMIN)
                         @if(auth::user())
                         <!-- Menu Notification Option Start -->
@@ -290,8 +290,8 @@
                         @endif
                         @if (Route::has('login'))
                         @auth
-                        
-                        @if(isEnableOpenAI()) 
+
+                        @if(isEnableOpenAI())
                          <!-- AI Option Start -->
                          <li class="nav-item menu-round-btn">
                             <a id="ai-content-toggle" class="nav-link" aria-current="page">
@@ -403,7 +403,7 @@
                                             {{ __('Device Control') }}</a>
                                     </li>
                                     @endif
-                                    
+
                                     @if(Auth::user()->role == USER_ROLE_STUDENT || Auth::user()->is_affiliator == AFFILIATOR || (Auth::user()->role == USER_ROLE_INSTRUCTOR &&
                                     @$authUser->instructor->status == STATUS_APPROVED) || (Auth::user()->role == USER_ROLE_ORGANIZATION &&
                                     @$authUser->organization->status == STATUS_APPROVED))
@@ -506,6 +506,6 @@
     <!-- Navigation -->
 </section>
 
-@if(isEnableOpenAI()) 
+@if(isEnableOpenAI())
 @include('addon.AI.content-generation')
 @endif
