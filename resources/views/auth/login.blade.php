@@ -24,7 +24,7 @@
                             @csrf
 
                             <h5 class="mb-1">{{__('Sign In')}}</h5>
-                            <p class="font-14 mb-30">{{__('New User')}} ? <a href="{{route('sign-up')}}" class="color-hover text-decoration-underline font-medium">{{__('Create an Account')}}</a></p>
+{{--                            <p class="font-14 mb-30">{{__('New User')}} ? <a href="{{route('sign-up')}}" class="color-hover text-decoration-underline font-medium">{{__('Create an Account')}}</a></p>--}}
 
                             <div class="row mb-30">
                                 <div class="col-md-12">

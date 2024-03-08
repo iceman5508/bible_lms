@@ -563,10 +563,10 @@
                         </div>
 
                         <!-- section button start-->
-                        <div class="col-12 section-btn">
-                            <a href="{{ route('student.become-an-instructor') }}" class="theme-btn theme-button1">{{ __('Become an Instructor') }} <i
-                                    data-feather="arrow-right"></i></a>
-                        </div>
+{{--                        <div class="col-12 section-btn">--}}
+{{--                            <a href="{{ route('student.become-an-instructor') }}" class="theme-btn theme-button1">{{ __('Become an Instructor') }} <i--}}
+{{--                                    data-feather="arrow-right"></i></a>--}}
+{{--                        </div>--}}
                         <!-- section button end-->
                     </div>
                 </div>
@@ -849,9 +849,12 @@
                 <div class="modal-body">
                     <div class="video-player-area">
                         <!-- HTML 5 Video -->
-                        <video id="player" playsinline controls data-poster="{{ getImageFile(get_option('become_instructor_video_preview_image')) }}" controlsList="nodownload">
-                            <source src="{{ getVideoFile(get_option('become_instructor_video')) }}" type="video/mp4" >
-                        </video>
+                        <iframe width="800" height="500"
+                                src="https://www.youtube.com/embed/9pZ466l79Zk?autoplay=1">
+                        </iframe>
+{{--                        <video id="player" playsinline controls data-poster="{{ getImageFile(get_option('become_instructor_video_preview_image')) }}" controlsList="nodownload">--}}
+{{--                            <source src="{{ getVideoFile(get_option('become_instructor_video')) }}" type="video/mp4" >--}}
+{{--                        </video>--}}
                     </div>
                 </div>
             </div>
