@@ -29,7 +29,7 @@ class AssignmentController extends Controller
         $data['title'] = 'Assignment';
         $data['navCourseActiveClass'] = 'active';
         $data['course'] = $this->courseModel->getRecordByUuid($course_uuid);
-        $data['assignments'] = Assignment::where('course_id', $data['course']->id)->paginate();
+        $data['assignments'] = Assignment::where('course_id', $data['course']->id)->paginate(6);
         return view('instructor.course.assignment.index', $data);
     }
 

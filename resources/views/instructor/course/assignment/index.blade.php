@@ -73,6 +73,7 @@
                             @endforeach
                             </tbody>
                         </table>
+                        {{$assignments->links()}}
                     </div>
                     @else
                     <!-- If there is no data Show Empty Design Start -->
