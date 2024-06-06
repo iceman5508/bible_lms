@@ -43,6 +43,7 @@ use App\Http\Controllers\Admin\SkillController;
 use App\Http\Controllers\Admin\SaasController;
 use App\Http\Controllers\Admin\SubscriptionController;
 use App\Http\Controllers\Admin\WalletRechargeController;
+use App\Http\Controllers\StudentReport;
 use App\Http\Controllers\VersionUpdateController;
 use Illuminate\Support\Facades\Route;
 
@@ -321,6 +322,15 @@ Route::prefix('profile')->group(function () {
 });
 
 
+/***
+ * Reporting
+ */
+
+Route::prefix('reports')->group(function () {
+    Route::get('/', [StudentReport::class, 'index'])->name('student_report');
+    Route::get('/run/{id}', [StudentReport::class, 'run'])->name('run_report');
+});
+
 Route::prefix('language')->group(function () {
     Route::get('/', [LanguageController::class, 'index'])->name('language.index');
     Route::get('create', [LanguageController::class, 'create'])->name('language.create');
@@ -410,7 +420,7 @@ Route::group(['prefix' => 'settings', 'as' => 'settings.'], function () {
     Route::get('maintenance-mode-changes', [SettingController::class, 'maintenanceMode'])->name('maintenance');
     Route::post('maintenance-mode-changes', [SettingController::class, 'maintenanceModeChange'])->name('maintenance.change')->middleware('isDemo');
     //End:: Maintenance Mode
-   
+
     //Start:: Coming Soon Mode
     Route::get('coming-soon-mode-changes', [SettingController::class, 'comingSoonMode'])->name('coming-soon');
     Route::post('coming-soon-mode-changes', [SettingController::class, 'comingSoonModeChange'])->name('coming-soon.change')->middleware('isDemo');
@@ -617,7 +627,7 @@ Route::group(['prefix' => 'settings', 'as' => 'settings.'], function () {
     Route::get('version-update-execute', [VersionUpdateController::class, 'versionUpdateExecute'])->name('file-version-update-execute')->middleware('isDemo');
     Route::get('version-delete', [VersionUpdateController::class, 'versionFileUpdateDelete'])->name('file-version-delete')->middleware('isDemo');
 
-    
+
 });
 
 Route::group(['prefix' => 'addon', 'as' => 'admin.addon.'], function () {

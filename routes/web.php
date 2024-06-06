@@ -49,6 +49,7 @@ Route::group(['middleware' => ['version.update']], function () {
     Route::group(['middleware' => ['auth']], function () {
         Route::get('/logout', [LoginController::class, 'logout']);
         Route::get('/home', [HomeController::class, 'index'])->name('home');
+
     });
 });
 
